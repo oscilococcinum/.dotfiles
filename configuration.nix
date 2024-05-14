@@ -1,13 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -15,13 +8,15 @@
     config.boot.kernelPackages.rtl8812au 
   ];
 
+  networking.hostName = "oscilo-pc"; # Define your hostname.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "oscilo-pc"; # Define your hostname.
 
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
@@ -45,13 +40,13 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
+  services.xserver.displayManager.sddm.enable = true;
+  programs.hyprland.enable = true;
+  
   # Configure keymap in X11
   services.xserver = {
-    xkb.layout = "pl";
-    xkb.variant = "";
+    layout = "pl";
+    xkbVariant = "";
   };
 
   # Configure console keymap
@@ -95,9 +90,17 @@
       kitty
       firefox
       discord
+      teams-for-linux
     ];
   };
-  
+
+  # Enable automatic login for the user.
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "oscilo";
+
+  # Install firefox.
+  programs.firefox.enable = true;
+
   programs.fish.enable = true;
 
   programs.steam = {
@@ -106,15 +109,20 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
-  environment.systemPackages = [
-  ];
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "oscilo";
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  environment.systemPackages = with pkgs; [
+  
+  ];
+
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
