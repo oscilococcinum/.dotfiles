@@ -91,6 +91,7 @@
       firefox
       discord
       teams-for-linux
+      wofi
     ];
   };
 
