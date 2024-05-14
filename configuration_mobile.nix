@@ -1,13 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       <home-manager/nixos>
     ];
 
@@ -29,7 +24,7 @@
   time.timeZone = "Europe/Warsaw";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "pl_PL.UTF-8";
+  i18n.defaultLocale = "pl_PL.UTF-8" ;
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pl_PL.UTF-8";
@@ -44,13 +39,13 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "pl";
-    xkbVariant = "";
-  };
+  #services.xserver = {
+  #  layout = "pl";
+  #  xkbVariant = "";
+  #};
 
   # Configure console keymap
-  console.keyMap = "pl";
+  console.keyMap = "pl2";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.oscilo = {
@@ -198,23 +193,23 @@
     
     ###Configs 
     home.file.".config/hypr" = {
-      source = /etc/nixos/hypr;
+      source = /home/oscilo/.dotfiles/hypr;
       recursive = true;
     };
  
     ###Kitty config
     home.file.".config/kitty/kitty.conf" = {
-      source = /etc/nixos/kitty/kitty.conf;
+      source = /home/oscilo/.dotfiles/kitty/kitty.conf;
     };
 
     ###Fish config
     home.file.".config/omf" = { 
-      source = /etc/nixos/omf;
+      source = /home/oscilo/.dotfiles/omf;
       recursive = true;
     };
 
     home.file.".config/fish" = { 
-      source = /etc/nixos/fish;
+      source = /home/oscilo/.dotfiles/fish;
       recursive = true;
     };
   };
