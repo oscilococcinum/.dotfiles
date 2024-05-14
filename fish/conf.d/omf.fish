@@ -1,0 +1,1 @@
+/nix/store/9xyhxn601a07iq7x2h8pi8w8mz643536-home-manager-files/.config/fish/conf.d/omf.fish
