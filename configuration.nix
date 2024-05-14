@@ -37,17 +37,20 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.wayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  programs.hyprland.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
   
   # Configure keymap in X11
-  services.xserver = {
-    layout = "pl";
-    xkbVariant = "";
-  };
+  #services.xserver = {
+  #  layout = "pl";
+  #  xkbVariant = "";
+  #};
 
   # Configure console keymap
   console.keyMap = "pl2";
@@ -96,8 +99,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "oscilo";
+  # services.xserver.displayManager.autoLogin.enable = true;
+  # services.xserver.displayManager.autoLogin.user = "oscilo";
 
   # Install firefox.
   programs.firefox.enable = true;
