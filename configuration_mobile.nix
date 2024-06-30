@@ -100,7 +100,7 @@
         firefox
         thunderbird
         fish
-        rofi
+        wofi
         super-slicer-beta
         freecad
         xfce.thunar
