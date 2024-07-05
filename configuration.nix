@@ -7,6 +7,11 @@
     config.boot.kernelPackages.rtl8812au 
   ];
 
+  fileSystems."/media/crucial" =
+    { device = "/dev/sda1";
+      fsType = "ext4";
+    };
+
   networking.hostName = "oscilo-pc";
   networking.networkmanager.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -36,7 +41,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       waybar
-      bluetuith
       usbutils
       wget
       gcc
@@ -55,12 +59,12 @@
       xfce.thunar
       p7zip
       libreoffice-fresh
-      teams-for-linux
       grive2 
       swww
       nodejs_21
       flameshot
       vscode
+      torrential
     ];
   };
 
@@ -77,6 +81,13 @@
   programs.fish = {
     enable = true;
   };
+  
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+
   fonts.packages = with pkgs; [
     font-awesome
   ];
