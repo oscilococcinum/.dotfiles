@@ -6,11 +6,18 @@
   boot.extraModulePackages = [ 
     config.boot.kernelPackages.rtl8812au 
   ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   fileSystems."/media/crucial" =
     { device = "/dev/sda1";
       fsType = "ext4";
     };
+
+  fileSystems."/media/storage" =
+    { device = "/dev/sdb1";
+      fsType = "ntfs-3g";
+    };
+
 
   networking.hostName = "oscilo-pc";
   networking.networkmanager.enable = true;
@@ -52,7 +59,6 @@
       libsForQt5.okular
       discord
       firefox
-      thunderbird
       rofi
       super-slicer-beta
       freecad
@@ -65,6 +71,9 @@
       flameshot
       vscode
       torrential
+      lutris
+      wineWowPackages.waylandFull
+      gzip
     ];
   };
 
