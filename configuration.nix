@@ -75,14 +75,9 @@
       p7zip
       libreoffice-fresh
       grive2 
-      swww
-      nodejs_21
-      flameshot
-      vscode
       torrential
       lutris
       wineWowPackages.waylandFull
-      gzip
     ];
   };
   
