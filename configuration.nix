@@ -2,8 +2,6 @@
 let 
   ondsel-appimage-pre = (builtins.getFlake "/home/oscilo/ondsel-nix").packages.x86_64-linux.ondsel-appimage-pre;
   openfoam = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux.openfoam-2312;
-  parmentis = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux.parmetis-shared;
-
 in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -85,7 +83,6 @@ in {
       pkgs.paraview
       ondsel-appimage-pre
       #openfoam
-      parmentis
     ]; 
   };
 
