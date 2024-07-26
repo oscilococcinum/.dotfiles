@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ lib, imputs, config, pkgs, ... }:
+let 
+  ondsel-appimage-pre = (builtins.getFlake "/home/oscilo/ondsel-nix").packages.x86_64-linux.ondsel-appimage-pre;
+  openfoam = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux.openfoam-2312;
+  parmentis = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux.parmetis-shared;
 
-{
+in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
@@ -46,45 +50,62 @@
     LC_TELEPHONE = "pl_PL.UTF-8";
     LC_TIME = "pl_PL.UTF-8";
   };
-
   console.keyMap = "pl2";
-  
+
   ###Users
   users.users.oscilo = {
     shell = pkgs.fish;
     isNormalUser = true;
     description = "oscilo";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      waybar
-      usbutils
-      wget
-      gcc
-      htop
-      git
-      pavucontrol
-      neofetch
-      kitty
-      libsForQt5.okular
-      discord
-      firefox
-      rofi
-      super-slicer-beta
-      freecad
-      xfce.thunar
-      p7zip
-      libreoffice-fresh
-      grive2 
-      torrential
-      lutris
-      wineWowPackages.waylandFull
-    ];
+    packages = [
+      pkgs.waybar
+      pkgs.usbutils
+      pkgs.wget
+      pkgs.gcc
+      pkgs.htop
+      pkgs.git
+      pkgs.pavucontrol
+      pkgs.neofetch
+      pkgs.kitty
+      pkgs.libsForQt5.okular
+      pkgs.discord
+      pkgs.firefox
+      pkgs.rofi
+      pkgs.super-slicer-beta
+      pkgs.freecad
+      pkgs.xfce.thunar
+      pkgs.p7zip
+      pkgs.libreoffice-fresh
+      pkgs.grive2 
+      pkgs.torrential
+      pkgs.lutris
+      pkgs.wineWowPackages.waylandFull
+      pkgs.spacenavd
+      pkgs.paraview
+      ondsel-appimage-pre
+      #openfoam
+      parmentis
+    ]; 
   };
-  
+
   ###Global programs
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    configure = {
+      customRC = ''
+        " here your custom configuration goes!
+      '';
+      packages.myVimPackage = with pkgs.vimPlugins; {
+        # loaded on launch
+        start = [ fugitive ];
+        # manually loadable by calling `:packadd $plugin-name`
+        opt = [ ];
+      };
+    };
   };
 
   programs.hyprland = {
