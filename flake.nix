@@ -1,6 +1,4 @@
 {
-  description = "Ondsel package from AppImage";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     
@@ -16,10 +14,10 @@
   };
 
   outputs = { nixpkgs, ... }@inputs: {
-    packages = builtins.listToAttrs (map
-      (system: {
+    packages = builtins.listToAttrs (map (system: 
+      {
         name = system;
-        value = with import nixpkgs { inherit system; }; rec {
+        value = with import nixpkgs { inherit system; config.allowUnfree = true;}; rec {
           
 	  ###Place for pkgs defined in custompkgs
           ondsel-appimage = appimageTools.wrapType2 {
@@ -41,6 +39,7 @@
           cfmesh-cfdof-unstable = cfmesh-cfdof.override { version = "unstable"; };
           hisa-unstable = hisa.override { version = "unstable"; };
         };
-      }) [ "x86_64-linux" "aarch64-linux" ]);
+      }
+    )[ "x86_64-linux" "aarch64-linux" ]);
   };
 }
