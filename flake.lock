@@ -1,0 +1,79 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1721924956,
+        "narHash": "sha256-Sb1jlyRO+N8jBXEX9Pg9Z1Qb8Bw9QyOgLDNMEpmjZ2M=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5ad6a14c6bf098e98800b091668718c336effc95",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "ondsel-appimage-aarch64-linux": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-JxWluM41nysZNCNkPtsSjPofd/JCdq/TonWt3CndxGU=",
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage"
+      }
+    },
+    "ondsel-appimage-pre-aarch64-linux": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-DAortD667+wHs5b9usnBpqU/ppfQVJSBoKFdFMjiR+8=",
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-aarch64.AppImage"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-aarch64.AppImage"
+      }
+    },
+    "ondsel-appimage-pre-x86_64-linux": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-RrQML+Tor4WwHJFKZeizh71+wmdD1hhPUcfEEyZIfJY=",
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-x86_64.AppImage"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-x86_64.AppImage"
+      }
+    },
+    "ondsel-appimage-x86_64-linux": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-/xUCB2m/I+lJQ8pJWg/x+HextY10JSgXo6wuBivbijE=",
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-x86_64.AppImage"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-x86_64.AppImage"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "ondsel-appimage-aarch64-linux": "ondsel-appimage-aarch64-linux",
+        "ondsel-appimage-pre-aarch64-linux": "ondsel-appimage-pre-aarch64-linux",
+        "ondsel-appimage-pre-x86_64-linux": "ondsel-appimage-pre-x86_64-linux",
+        "ondsel-appimage-x86_64-linux": "ondsel-appimage-x86_64-linux"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
