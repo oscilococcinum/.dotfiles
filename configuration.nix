@@ -1,7 +1,6 @@
 { lib, imputs, config, pkgs, ... }:
-let 
-  ondsel-appimage-pre = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux.ondsel-appimage-pre;
-  openfoam = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux.openfoam;
+let
+  custompkgs = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux;
 in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -81,8 +80,8 @@ in {
       pkgs.wineWowPackages.waylandFull
       pkgs.spacenavd
       pkgs.paraview
-      ondsel-appimage-pre
-      openfoam
+      custompkgs.ondsel-appimage-pre
+      custompkgs.openfoam
       pkgs.mpi
     ]; 
   };
