@@ -2,6 +2,11 @@
 let
   custompkgs = (builtins.getFlake "/home/oscilo/.dotfiles").packages.x86_64-linux;
 in {
+  imports =
+    [ # Include the results of the hardware scan.
+      /etc/nixos/hardware-configuration.nix
+    ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
