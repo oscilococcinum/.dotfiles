@@ -7,7 +7,7 @@
 , ninja
 , pkg-config
 , yaml-cpp
-, requests
+, frequest
 }:
 let
   ondsel = freecad.overrideAttrs (finalAttrs: previousAttrs: {
@@ -19,7 +19,7 @@ let
       owner = "Ondsel-Development";
       repo = "FreeCAD";
       rev = finalAttrs.version;
-      hash = "sha256-1Xyj2ta9ukBzP/Be0qivm0nv4/s4GGPwV+O3Ukd/5mE=";
+      hash = "sha256-mruDZnh00UPUEGNPDQ0/agJVOunKi57mECwJmqVFo1M=";
       fetchSubmodules = true;
     };
 
@@ -29,7 +29,7 @@ let
       pkg-config
       gfortran
       yaml-cpp
-      requests
+      frequest
     ];
 
     postPatch = ''
