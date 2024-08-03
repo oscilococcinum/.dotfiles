@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1721924956,
-        "narHash": "sha256-Sb1jlyRO+N8jBXEX9Pg9Z1Qb8Bw9QyOgLDNMEpmjZ2M=",
+        "lastModified": 1722421184,
+        "narHash": "sha256-/DJBI6trCeVnasdjUo9pbnodCLZcFqnVZiLUfqLH4jA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5ad6a14c6bf098e98800b091668718c336effc95",
+        "rev": "9f918d616c5321ad374ae6cb5ea89c9e04bf3e58",
         "type": "github"
       },
       "original": {
@@ -31,7 +31,7 @@
     "ondsel-appimage-pre-aarch64-linux": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-DAortD667+wHs5b9usnBpqU/ppfQVJSBoKFdFMjiR+8=",
+        "narHash": "sha256-ijrvDDH/IsIBGJEaSHUHDepGtUkNo9qv8GUNx4Z9JP4=",
         "type": "file",
         "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-aarch64.AppImage"
       },
@@ -43,7 +43,7 @@
     "ondsel-appimage-pre-x86_64-linux": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-RrQML+Tor4WwHJFKZeizh71+wmdD1hhPUcfEEyZIfJY=",
+        "narHash": "sha256-e91EYlRXWRLzk0XM9hVOdTbjgCIvKqm7/90rmsJfByE=",
         "type": "file",
         "url": "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-x86_64.AppImage"
       },

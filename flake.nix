@@ -35,6 +35,7 @@
           cfmesh-cfdof-unstable = cfmesh-cfdof.override { version = "unstable"; };
           hisa-unstable = hisa.override { version = "unstable"; };
           openfoam = pkgs.callPackage (import ./custompkgs/openfoam-com) { };
+          ondsel = pkgs.callPackage (import ./custompkgs/ondsel) { };
         };
       }
     )[ "x86_64-linux" "aarch64-linux" ]);
