@@ -3,14 +3,14 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     
     ###Place for appimages
-    ondsel-appimage-x86_64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-x86_64.AppImage";
-    ondsel-appimage-x86_64-linux.flake = false;
-    ondsel-appimage-aarch64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage";
-    ondsel-appimage-aarch64-linux.flake = false;
+    #ondsel-appimage-x86_64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-x86_64.AppImage";
+    #ondsel-appimage-x86_64-linux.flake = false;
+    #ondsel-appimage-aarch64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/2024.2.2/Ondsel_ES_2024.2.2.37240-Linux-aarch64.AppImage";
+    #ondsel-appimage-aarch64-linux.flake = false;
     ondsel-appimage-pre-x86_64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-x86_64.AppImage";
     ondsel-appimage-pre-x86_64-linux.flake = false;
-    ondsel-appimage-pre-aarch64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-aarch64.AppImage";
-    ondsel-appimage-pre-aarch64-linux.flake = false;
+    #ondsel-appimage-pre-aarch64-linux.url = "https://github.com/Ondsel-Development/FreeCAD/releases/download/weekly-builds/Ondsel_ES_weekly-builds-38021-Linux-aarch64.AppImage";
+    #ondsel-appimage-pre-aarch64-linux.flake = false;
   };
 
   outputs = { nixpkgs, ... }@inputs: {
