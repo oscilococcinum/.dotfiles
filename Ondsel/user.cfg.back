@@ -9,10 +9,8 @@
           <FCBool Name="SubstituteDecimalSeparator" Value="1"/>
           <FCBool Name="ShowSplasherMessages" Value="0"/>
           <FCText Name="AutoloadModule">PartDesignWorkbench</FCText>
-          <FCText Name="FileOpenSavePath">/home/oscilo/.cache/Ondsel/Cache/Ondsel-Lens/660c2b4844d3202dcb51e525</FCText>
+          <FCText Name="FileOpenSavePath">/home/oscilo</FCText>
           <FCParamGroup Name="HiddenPreferencePacks"/>
-          <FCText Name="LastModule">DraftWorkbench</FCText>
-          <FCBool Name="ConfirmAll" Value="0"/>
         </FCParamGroup>
         <FCParamGroup Name="Mod">
           <FCParamGroup Name="Assembly">
@@ -99,14 +97,6 @@
             </FCParamGroup>
             <FCBool Name="SingleDimensioningTool" Value="1"/>
             <FCBool Name="SeparatedDimensioningTools" Value="0"/>
-            <FCParamGroup Name="Files"/>
-            <FCParamGroup Name="Standards"/>
-            <FCParamGroup Name="General"/>
-            <FCParamGroup Name="Rez"/>
-            <FCParamGroup Name="Labels"/>
-            <FCParamGroup Name="HLR"/>
-            <FCParamGroup Name="debug"/>
-            <FCParamGroup Name="PAT"/>
           </FCParamGroup>
           <FCParamGroup Name="Sketcher">
             <FCParamGroup Name="General">
@@ -121,7 +111,6 @@
               <FCBool Name="SectionView" Value="1"/>
               <FCInt Name="GridDivLinePattern" Value="65535"/>
               <FCInt Name="GridLinePattern" Value="43690"/>
-              <FCParamGroup Name="GridSize"/>
             </FCParamGroup>
             <FCParamGroup Name="Constraints">
               <FCBool Name="UnifiedCoincident" Value="1"/>
@@ -171,17 +160,6 @@
           </FCParamGroup>
           <FCParamGroup Name="OpenSCAD"/>
           <FCParamGroup Name="Help"/>
-          <FCParamGroup Name="Material">
-            <FCParamGroup Name="Resources">
-              <FCParamGroup Name="Modules"/>
-            </FCParamGroup>
-          </FCParamGroup>
-          <FCParamGroup Name="Fem">
-            <FCParamGroup Name="Ccx"/>
-            <FCParamGroup Name="Elmer"/>
-            <FCParamGroup Name="Mystran"/>
-            <FCParamGroup Name="Z88"/>
-          </FCParamGroup>
         </FCParamGroup>
         <FCParamGroup Name="OutputWindow">
           <FCUInt Name="colorText" Value="3570717951"/>
@@ -1256,7 +1234,7 @@
           <FCUInt Name="TreeActiveColor" Value="556083711"/>
           <FCInt Name="ItemBackgroundPadding" Value="11"/>
           <FCInt Name="FontSize" Value="11"/>
-          <FCInt Name="ColumnSize1" Value="238"/>
+          <FCInt Name="ColumnSize1" Value="192"/>
           <FCInt Name="ColumnSize2" Value="0"/>
           <FCInt Name="ColumnSize3" Value="0"/>
         </FCParamGroup>
@@ -1265,11 +1243,11 @@
           <FCText Name="StyleSheet">OpenDark.qss</FCText>
           <FCText Name="OverlayActiveStyleSheet">OpenDark_Overlay.qss</FCText>
           <FCText Name="WSPosition">WSToolbar</FCText>
-          <FCText Name="MainWindowState">AAAA/wAAAAD9AAAAAwAAAAAAAAEAAAABZvwCAAAAAvsAAAASAFQAcgBlAGUAIAB2AGkAZQB3AQAAAIYAAAFmAAAAAAAAAAD7AAAAHABTAGUAbABlAGMAdABpAG8AbgAgAHYAaQBlAHcAAAAAAP////8AAACVAP///wAAAAEAAAGFAAADZfwCAAAAAfwAAACPAAADZQAAAm4BAAAg+gAAAAECAAAAA/sAAAAaAHcAbwByAGsAcwBwAGEAYwBlAFYAaQBlAHcBAAAAAP////8AAAJNAP////sAAAAaAFAAcgBvAHAAZQByAHQAeQAgAHYAaQBlAHcBAAAAAP////8AAACgAP////sAAAAKAFQAYQBzAGsAcwEAAAAA/////wAAAGkA////AAAAAwAAAAAAAAAA/AEAAAAB/AAAAAD/////AAAAAAD////6/////wEAAAAC+wAAABYAUgBlAHAAbwByAHQAIAB2AGkAZQB3AAAAAAD/////AAAAVgD////7AAAAHABQAHkAdABoAG8AbgAgAGMAbwBuAHMAbwBsAGUAAAAAAP////8AAABUAP///wAAAjMAAANlAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAgAAAAEAAAASAFcAbwByAGsAYgBlAG4AYwBoAQAAAAD/////AAAAAAAAAAAAAAACAAAABQAAAAgARgBpAGwAZQEAAAAA/////wAAAAAAAAAAAAAACABFAGQAaQB0AQAAAIT/////AAAAAAAAAAAAAAASAFMAdAByAHUAYwB0AHUAcgBlAQAAARL/////AAAAAAAAAAAAAAAIAFYAaQBlAHcBAAABwP////8AAAAAAAAAAAAAAAgASABlAGwAcAEAAAMo/////wAAAAAAAAAAAAAAAgAAABgAAAAkAFAAYQByAHQAIABEAGUAcwBpAGcAbgAgAEgAZQBsAHAAZQByAAAAAAD/////AAAAAAAAAAAAAAAoAFAAYQByAHQAIABEAGUAcwBpAGcAbgAgAE0AbwBkAGUAbABpAG4AZwAAAAEo/////wAAAAAAAAAAAAAAEgBDAGwAaQBwAGIAbwBhAHIAZAAAAAAA/////wAAAAAAAAAAAAAACgBNAGEAYwByAG8AAAAAAP////8AAAAAAAAAAAAAACAASQBuAGQAaQB2AGkAZAB1AGEAbAAgAHYAaQBlAHcAcwAAAAAA/////wAAAAAAAAAAAAAAJgBQAGEAcgB0ACAARABlAHMAaQBnAG4AIABEAHIAZQBzAHMAdQBwAAAAA3z/////AAAAAAAAAAAAAAAoAFAAYQByAHQAIABEAGUAcwBpAGcAbgAgAFAAYQB0AHQAZQByAG4AcwAAAAQo/////wAAAAAAAAAAAAAAFgBXAGUAbABkAEYAZQBhAHQAdQByAGUAAAAAAP////8AAAAAAAAAAAAAABwAVABlAGMAaABEAHIAYQB3ACAAUABhAGcAZQBzAAAAAAD/////AAAAAAAAAAAAAAAcAFQAZQBjAGgARAByAGEAdwAgAFYAaQBlAHcAcwAAAADU/////wAAAAAAAAAAAAAAIgBUAGUAYwBoAEQAcgBhAHcAIABTAHQAYQBjAGsAaQBuAGcAAAAB+v////8AAAAAAAAAAAAAACYAVABlAGMAaABEAHIAYQB3ACAARABpAG0AZQBuAHMAaQBvAG4AcwAAAAIw/////wAAAAAAAAAAAAAAJgBUAGUAYwBoAEQAcgBhAHcAIABBAHQAdAByAGkAYgB1AHQAZQBzAAAAAwb/////AAAAAAAAAAAAAAAoAFQAZQBjAGgARAByAGEAdwAgAEMAZQBuAHQAZQByAGwAaQBuAGUAcwAAAAQE/////wAAAAAAAAAAAAAANABUAGUAYwBoAEQAcgBhAHcAIABFAHgAdABlAG4AZAAgAEQAaQBtAGUAbgBzAGkAbwBuAHMAAAAE4v////8AAAAAAAAAAAAAACgAVABlAGMAaABEAHIAYQB3ACAARgBpAGwAZQAgAEEAYwBjAGUAcwBzAAAABUL/////AAAAAAAAAAAAAAAmAFQAZQBjAGgARAByAGEAdwAgAEQAZQBjAG8AcgBhAHQAaQBvAG4AAAAFnv////8AAAAAAAAAAAAAACYAVABlAGMAaABEAHIAYQB3ACAAQQBuAG4AbwB0AGEAdABpAG8AbgAAAAYi/////wAAAAAAAAAAAAAAFABEAHIAYQBmAHQAIAB0AHIAYQB5AAAAAAD/////AAAAAAAAAAAAAAAoAEQAcgBhAGYAdAAgAGMAcgBlAGEAdABpAG8AbgAgAHQAbwBvAGwAcwEAAAEV/////wAAAAAAAAAAAAAALABEAHIAYQBmAHQAIABhAG4AbgBvAHQAYQB0AGkAbwBuACAAdABvAG8AbABzAQAAArj/////AAAAAAAAAAAAAAAwAEQAcgBhAGYAdAAgAG0AbwBkAGkAZgBpAGMAYQB0AGkAbwBuACAAdABvAG8AbABzAQAAAvn/////AAAAAAAAAAAAAAAmAEQAcgBhAGYAdAAgAHUAdABpAGwAaQB0AHkAIAB0AG8AbwBsAHMBAAADOv////8AAAAAAAAAAAAAABQARAByAGEAZgB0ACAAcwBuAGEAcAEAAAN7/////wAAAAAAAAAA</FCText>
+          <FCText Name="MainWindowState">AAAA/wAAAAD9AAAAAwAAAAAAAAEAAAADufwCAAAAAvsAAAASAFQAcgBlAGUAIAB2AGkAZQB3AQAAAGIAAAO5AAAAAAAAAAD7AAAAHABTAGUAbABlAGMAdABpAG8AbgAgAHYAaQBlAHcAAAAAAP////8AAACWAP///wAAAAEAAAF4AAABWfwCAAAAAfwAAACPAAABWQAAAW4BAAAg+gAAAAICAAAAA/sAAAAaAHcAbwByAGsAcwBwAGEAYwBlAFYAaQBlAHcBAAAAAP////8AAAFNAP////sAAAAaAFAAcgBvAHAAZQByAHQAeQAgAHYAaQBlAHcBAAAAAP////8AAACgAP////sAAAAKAFQAYQBzAGsAcwEAAAAA/////wAAAGkA////AAAAAwAAAAAAAAAA/AEAAAAB/AAAAAD/////AAAAAAD////6/////wEAAAAC+wAAABYAUgBlAHAAbwByAHQAIAB2AGkAZQB3AAAAAAD/////AAAAVgD////7AAAAHABQAHkAdABoAG8AbgAgAGMAbwBuAHMAbwBsAGUAAAAAAP////8AAABUAP///wAAAkAAAAFZAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAgAAAAEAAAASAFcAbwByAGsAYgBlAG4AYwBoAQAAAAD/////AAAAAAAAAAAAAAACAAAABQAAAAgARgBpAGwAZQEAAAAA/////wAAAAAAAAAAAAAACABFAGQAaQB0AQAAAIT/////AAAAAAAAAAAAAAASAFMAdAByAHUAYwB0AHUAcgBlAQAAARL/////AAAAAAAAAAAAAAAIAFYAaQBlAHcBAAABwP////8AAAAAAAAAAAAAAAgASABlAGwAcAEAAAMo/////wAAAAAAAAAAAAAAAgAAAAcAAAAkAFAAYQByAHQAIABEAGUAcwBpAGcAbgAgAEgAZQBsAHAAZQByAQAAAAD/////AAAAAAAAAAAAAAAoAFAAYQByAHQAIABEAGUAcwBpAGcAbgAgAE0AbwBkAGUAbABpAG4AZwEAAAEo/////wAAAAAAAAAAAAAAEgBDAGwAaQBwAGIAbwBhAHIAZAAAAAAA/////wAAAAAAAAAAAAAACgBNAGEAYwByAG8AAAAAAP////8AAAAAAAAAAAAAACAASQBuAGQAaQB2AGkAZAB1AGEAbAAgAHYAaQBlAHcAcwAAAAAA/////wAAAAAAAAAAAAAAJgBQAGEAcgB0ACAARABlAHMAaQBnAG4AIABEAHIAZQBzAHMAdQBwAQAAAzr/////AAAAAAAAAAAAAAAoAFAAYQByAHQAIABEAGUAcwBpAGcAbgAgAFAAYQB0AHQAZQByAG4AcwEAAAN7/////wAAAAAAAAAA</FCText>
           <FCBool Name="Maximized" Value="1"/>
-          <FCBool Name="WindowStateRestored" Value="0"/>
+          <FCBool Name="WindowStateRestored" Value="1"/>
           <FCBool Name="StatusBar" Value="1"/>
-          <FCText Name="Geometry">962 32 956 1046</FCText>
+          <FCText Name="Geometry">2 32 956 521</FCText>
         </FCParamGroup>
         <FCParamGroup Name="Units">
           <FCInt Name="Decimals" Value="3"/>
@@ -1277,7 +1255,6 @@
         </FCParamGroup>
         <FCParamGroup Name="Document">
           <FCBool Name="CanAbortRecompute" Value="1"/>
-          <FCBool Name="SaveThumbnail" Value="1"/>
         </FCParamGroup>
         <FCParamGroup Name="NotificationArea">
           <FCBool Name="NonIntrusiveNotificationsEnabled" Value="0"/>
@@ -1296,7 +1273,6 @@
           </FCParamGroup>
           <FCParamGroup Name="PropertyView">
             <FCBool Name="Enabled" Value="1"/>
-            <FCInt Name="FirstColumnSize" Value="199"/>
           </FCParamGroup>
           <FCParamGroup Name="TaskWatcher">
             <FCBool Name="Enabled" Value="0"/>
@@ -1320,22 +1296,11 @@
         <FCParamGroup Name="Themes"/>
         <FCParamGroup Name="PythonConsole"/>
         <FCParamGroup Name="Expression"/>
-        <FCParamGroup Name="PropertyView">
-          <FCInt Name="LastTabIndex" Value="1"/>
-        </FCParamGroup>
+        <FCParamGroup Name="PropertyView"/>
         <FCParamGroup Name="AppImage"/>
-        <FCParamGroup Name="RecentFiles">
-          <FCText Name="MRU0">/home/oscilo/.cache/Ondsel/Cache/Ondsel-Lens/660c2b4844d3202dcb51e525/piping01.FCStd</FCText>
-          <FCText Name="MRU1">/home/oscilo/compressor/piping01.FCStd</FCText>
-          <FCText Name="MRU2">/home/oscilo/Unnamed.FCStd</FCText>
-          <FCInt Name="RecentFiles" Value="4"/>
-        </FCParamGroup>
+        <FCParamGroup Name="RecentFiles"/>
         <FCParamGroup Name="RecentMacros"/>
         <FCParamGroup Name="CacheDirectory"/>
-        <FCParamGroup Name="Dialog"/>
-        <FCParamGroup Name="Selection">
-          <FCBool Name="AutoShowSelectionView" Value="0"/>
-        </FCParamGroup>
       </FCParamGroup>
       <FCParamGroup Name="MainWindow">
         <FCParamGroup Name="DockWindows">
@@ -1343,26 +1308,26 @@
           <FCBool Name="Std_ComboView" Value="1"/>
           <FCBool Name="Std_ReportView" Value="0"/>
           <FCBool Name="Std_PythonView" Value="0"/>
-          <FCBool Name="Std_TreeView" Value="1"/>
+          <FCBool Name="Std_TreeView" Value="0"/>
           <FCBool Name="Std_PropertyView" Value="1"/>
           <FCBool Name="Std_DAGView" Value="0"/>
           <FCParamGroup Name="OverlayLeft">
             <FCText Name="Widgets">Tree view,</FCText>
             <FCBool Name="Transparent" Value="1"/>
             <FCInt Name="Width" Value="256"/>
-            <FCInt Name="Height" Value="689"/>
+            <FCInt Name="Height" Value="165"/>
           </FCParamGroup>
           <FCBool Name="Std_TaskView" Value="1"/>
           <FCParamGroup Name="OverlayRight">
             <FCInt Name="Width" Value="90"/>
-            <FCInt Name="Height" Value="831"/>
+            <FCInt Name="Height" Value="307"/>
           </FCParamGroup>
           <FCParamGroup Name="OverlayTop">
-            <FCInt Name="Width" Value="307"/>
+            <FCInt Name="Width" Value="576"/>
             <FCInt Name="Height" Value="90"/>
           </FCParamGroup>
           <FCParamGroup Name="OverlayBottom">
-            <FCInt Name="Width" Value="411"/>
+            <FCInt Name="Width" Value="424"/>
             <FCInt Name="Height" Value="90"/>
           </FCParamGroup>
         </FCParamGroup>
@@ -1389,22 +1354,6 @@
           <FCBool Name="Part Design Modeling" Value="1"/>
           <FCBool Name="Part Design Dressup" Value="1"/>
           <FCBool Name="Part Design Patterns" Value="1"/>
-          <FCBool Name="WeldFeature" Value="1"/>
-          <FCBool Name="TechDraw Pages" Value="1"/>
-          <FCBool Name="TechDraw Views" Value="1"/>
-          <FCBool Name="TechDraw Stacking" Value="1"/>
-          <FCBool Name="TechDraw Dimensions" Value="1"/>
-          <FCBool Name="TechDraw Attributes" Value="1"/>
-          <FCBool Name="TechDraw Centerlines" Value="1"/>
-          <FCBool Name="TechDraw Extend Dimensions" Value="1"/>
-          <FCBool Name="TechDraw File Access" Value="1"/>
-          <FCBool Name="TechDraw Decoration" Value="1"/>
-          <FCBool Name="TechDraw Annotation" Value="1"/>
-          <FCBool Name="Draft creation tools" Value="1"/>
-          <FCBool Name="Draft annotation tools" Value="1"/>
-          <FCBool Name="Draft modification tools" Value="1"/>
-          <FCBool Name="Draft utility tools" Value="1"/>
-          <FCBool Name="Draft snap" Value="1"/>
         </FCParamGroup>
         <FCParamGroup Name="StatusBar"/>
         <FCParamGroup Name="MenuBarRight"/>
@@ -1448,45 +1397,11 @@
             <FCParamGroup Name="Ondsel-Lens"/>
           </FCParamGroup>
         </FCParamGroup>
-        <FCText Name="loginData">{"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE3MjI3OTY0ODYsImV4cCI6MTcyNTM4ODQ4NiwiYXVkIjoibGVucy5vbmRzZWwuY29tIiwic3ViIjoiNjYwYzJiNDY0NGQzMjAyZGNiNTFlNTIyIiwianRpIjoiMGZlNWJiNjctMjkxNi00MzllLTg1NDUtZTQ1NjZmNTQ2MDlkIn0.2CTvo6N4PH7NOLTFhpAU6ZkQI9kXC8C1CwYmXJRiHxA", "user": {"_id": "660c2b4644d3202dcb51e522", "email": "bargaw28@gmail.com", "username": "oscilo", "name": "oscilo", "createdAt": 1712073542725, "updatedAt": 1714755055444, "isTripe": null, "usernameHash": 2361554451, "userAccounting": {"ledgerBalances": {"Cash": 0, "ProcessorExpense": 0, "UnearnedRevenue": 0, "Revenue": 0, "SalesReturnsAndAllowances": 0}, "journal": [{"transactionId": "660c2b4644d3202dcb51e521", "time": 1712073542725, "description": "CREATION OF NEW ACCOUNT; TIER SET TO Unverified", "entries": []}, {"transactionId": "660c2b6344d3202dcb51e52c", "time": 1712073571426, "description": "ACCOUNT VERIFIED AND AUTOMATICALLY UPGRADED TO FREE Solo TIER FROM Unverified", "internalNote": "used feathersjs-auth-mgmt trigger on new account verification", "entries": []}]}, "isVerified": true, "verifyExpires": null, "verifyToken": null, "verifyShortToken": null, "verifyChanges": {}, "organizations": [{"_id": "660c2b4844d3202dcb51e523", "name": "Personal", "refName": "660c2b4644d3202dcb51e522", "type": "Personal"}], "defaultWorkspaceId": "660c2b4844d3202dcb51e525", "personalOrganization": {"_id": "660c2b4844d3202dcb51e523", "name": "Personal", "refName": "660c2b4644d3202dcb51e522", "type": "Personal"}, "agreementsAccepted": {"currentPrivacyPolicyVersion": "20230726", "currentTermsOfServiceVersion": "20230831", "history": [{"agreementDocId": "64eceef2a0deade6e5ff63f3", "category": "privacy-policy", "title": "Ondsel Privacy Policy", "version": "20230726", "whenAgreedTo": "Tue, 02 Apr 2024 15:59:06 GMT", "when": 1712073546015}, {"agreementDocId": "650897502d07f0ed39d2c717", "category": "terms-of-service", "title": "Ondsel Terms Of Use", "version": "20230831", "whenAgreedTo": "Tue, 02 Apr 2024 15:59:06 GMT", "when": 1712073546015}]}, "currentOrganizationId": "660c2b4844d3202dcb51e523", "notificationsId": "663515ef216d6de5000b3150", "tier": "Solo", "constraint": {"maxModelObjects": 50, "maxShareLinksPerModel": 2, "canUpload": true, "canDownloadOriginal": true, "canUpdateModelParameters": false, "canExportModel": false, "defaultValueOfPublicLinkGeneration": true, "canDisableAutomaticGenerationOfPublicLink": false, "canCreateOpenOrganization": false, "canCreatePrivateOrganization": false}, "nextTier": null, "subscriptionDetail": {"state": "good", "term": null, "anniversary": null}}}</FCText>
       </FCParamGroup>
       <FCParamGroup Name="Macro">
         <FCParamGroup Name="Macros"/>
       </FCParamGroup>
       <FCParamGroup Name="Workbench"/>
-      <FCParamGroup Name="History">
-        <FCParamGroup Name="PadLength">
-          <FCText Name="Length">40,000 mm</FCText>
-          <FCParamGroup Name="Length_History">
-            <FCText Name="Hist0">40,000 mm</FCText>
-          </FCParamGroup>
-        </FCParamGroup>
-        <FCParamGroup Name="PadLength2">
-          <FCText Name="Length2">10,000 mm</FCText>
-          <FCParamGroup Name="Length2_History">
-            <FCText Name="Hist0">10,000 mm</FCText>
-          </FCParamGroup>
-        </FCParamGroup>
-        <FCParamGroup Name="PadOffset">
-          <FCText Name="Offset">0,000 mm</FCText>
-          <FCParamGroup Name="Offset_History">
-            <FCText Name="Hist0">0,000 mm</FCText>
-          </FCParamGroup>
-        </FCParamGroup>
-        <FCParamGroup Name="PadTaperAngle">
-          <FCText Name="TaperAngle">0,000 °</FCText>
-          <FCParamGroup Name="TaperAngle_History">
-            <FCText Name="Hist0">0,000 °</FCText>
-          </FCParamGroup>
-        </FCParamGroup>
-        <FCParamGroup Name="PadTaperAngle2">
-          <FCText Name="TaperAngle2">0,000 °</FCText>
-          <FCParamGroup Name="TaperAngle2_History">
-            <FCText Name="Hist0">0,000 °</FCText>
-          </FCParamGroup>
-        </FCParamGroup>
-        <FCParamGroup Name="Dragger"/>
-      </FCParamGroup>
     </FCParamGroup>
     <FCParamGroup Name="Tux">
       <FCParamGroup Name="PersistentToolbars">
@@ -1499,9 +1414,6 @@
             <FCBool Name="Saved" Value="1"/>
             <FCText Name="Top">Workbench,Break,File,Edit,Structure,View,Help,Measure,Break,Part Design Helper,Part Design Modeling</FCText>
           </FCParamGroup>
-          <FCParamGroup Name="WeldWorkbench"/>
-          <FCParamGroup Name="TechDrawWorkbench"/>
-          <FCParamGroup Name="DraftWorkbench"/>
         </FCParamGroup>
       </FCParamGroup>
       <FCParamGroup Name="NavigationIndicator">
