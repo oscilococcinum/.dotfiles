@@ -79,7 +79,7 @@ in {
       pkgs.xfce.thunar
       pkgs.p7zip
       pkgs.libreoffice-fresh
-      pkgs.grive2 
+      pkgs.dropbox 
       pkgs.torrential
       pkgs.lutris
       pkgs.wineWowPackages.waylandFull
