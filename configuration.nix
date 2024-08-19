@@ -75,19 +75,15 @@ in {
       pkgs.firefox
       pkgs.rofi
       pkgs.super-slicer-beta
-      pkgs.freecad
       pkgs.xfce.thunar
       pkgs.p7zip
-      pkgs.libreoffice-fresh
       pkgs.dropbox 
-      pkgs.torrential
-      pkgs.lutris
-      pkgs.wineWowPackages.waylandFull
       pkgs.spacenavd
       pkgs.paraview
       custompkgs.ondsel-appimage-pre
       custompkgs.openfoam
       pkgs.mpi
+      pkgs.elmerfem
     ]; 
   };
 
