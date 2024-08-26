@@ -2,14 +2,14 @@
 
 let
   nix-alien-pkgs = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
-  openfoam-pkg = (builtins.getFlake "github:oscilococcinum/openfoam-nix").packages.x86_64-linux;
+  #openfoam-pkg = (builtins.getFlake "github:oscilococcinum/openfoam-nix").packages.x86_64-linux;
   ondsel-pkg = (builtins.getFlake "github:oscilococcinum/ondsel-nix").packages.x86_64-linux;
 in {
   users.users.oscilo = {
     shell = pkgs.fish;
     isNormalUser = true;
     description = "oscilo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "dialout" ];
     packages = [
       pkgs.waybar
       pkgs.usbutils
@@ -31,9 +31,9 @@ in {
       pkgs.spacenavd
       pkgs.paraview
       ondsel-pkg.ondsel-appimage-pre
-      openfoam-pkg.openfoam
-      pkgs.mpi
-      pkgs.elmerfem
+      #openfoam-pkg.openfoam
+      #pkgs.mpi
+      #pkgs.elmerfem
       nix-alien-pkgs.nix-alien
     ]; 
   };
