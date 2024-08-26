@@ -24,7 +24,7 @@
   boot.extraModulePackages = [ 
     config.boot.kernelPackages.rtl8812au 
   ];
-  networking.hostName = "oscilo-pc";
+  networking.hostName = "oscilo";
   networking.networkmanager.enable = true;
   networking.networkmanager.unmanaged = [
      "*" "except:type:wwan" "except:type:gsm"
@@ -38,7 +38,7 @@
   
   ###Locale
   time.timeZone = "Europe/Warsaw";
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "pl_PL.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pl_PL.UTF-8";
     LC_IDENTIFICATION = "pl_PL.UTF-8";
