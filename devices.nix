@@ -20,6 +20,11 @@
       fsType = "ntfs-3g";
     };
 
+  fileSystems."/media/kingston" =
+    { device = "/dev/sdc1";
+      fsType = "ntfs-3g";
+    };
+
   ###Networking
   boot.extraModulePackages = [ 
     config.boot.kernelPackages.rtl8812au 
