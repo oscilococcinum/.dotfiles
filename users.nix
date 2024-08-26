@@ -17,6 +17,7 @@ in {
       pkgs.gcc
       pkgs.htop
       pkgs.git
+      pkgs.lazygit
       pkgs.pavucontrol
       pkgs.neofetch
       pkgs.kitty
