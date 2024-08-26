@@ -10,20 +10,10 @@
   
   ###Hard_Drives
   boot.supportedFilesystems = [ "ntfs" ];
-  fileSystems."/media/crucial" =
-    { device = "/dev/sda1";
-      fsType = "ext4";
-    };
-
-  fileSystems."/media/storage" =
-    { device = "/dev/sdb1";
-      fsType = "ntfs-3g";
-    };
-
-  fileSystems."/media/kingston" =
-    { device = "/dev/sdc1";
-      fsType = "ntfs-3g";
-    };
+  fileSystems."/media/crucial" = {
+    device = "/dev/sda1";
+    fsType = "ext4";
+  };
 
   ###Networking
   boot.extraModulePackages = [ 
