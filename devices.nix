@@ -9,27 +9,27 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   ###Hard_Drives
-  boot.supportedFilesystems = [ "ntfs" ];
-  fileSystems."/media/crucial" = {
-    device = "/dev/sda1";
-    fsType = "ext4";
-  };
+#  boot.supportedFilesystems = [ "ntfs" ];
+#  fileSystems."/media/crucial" = {
+#    device = "/dev/sda1";
+#    fsType = "ext4";
+#  };
 
   ###Networking
-  boot.extraModulePackages = [ 
-    config.boot.kernelPackages.rtl8812au 
-  ];
+#  boot.extraModulePackages = [ 
+#    config.boot.kernelPackages.rtl8812au 
+#  ];
   networking.hostName = "oscilo";
   networking.networkmanager.enable = true;
-  networking.networkmanager.unmanaged = [
-     "*" "except:type:wwan" "except:type:gsm"
-  ];
-  networking.wireless.enable = true;
-  networking.wireless.networks = {
-    Orange_Swiatlowod_S_EXT = {
-      psk = "Bargaw28";
-    };
-  };
+#  networking.networkmanager.unmanaged = [
+#     "*" "except:type:wwan" "except:type:gsm"
+#  ];
+#  networking.wireless.enable = true;
+#  networking.wireless.networks = {
+#    Orange_Swiatlowod_S_EXT = {
+#      psk = "Bargaw28";
+#    };
+#  };
   
   ###Locale
   time.timeZone = "Europe/Warsaw";
