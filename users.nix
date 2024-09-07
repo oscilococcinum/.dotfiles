@@ -9,7 +9,7 @@ in {
     shell = pkgs.fish;
     isNormalUser = true;
     description = "oscilo";
-    extraGroups = [ "networkmanager" "wheel" "video" "dialout" ];
+    extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" ];
     packages = [
       pkgs.waybar
       pkgs.usbutils
@@ -25,7 +25,7 @@ in {
       pkgs.discord
       pkgs.firefox
       pkgs.rofi
-      pkgs.super-slicer-beta
+      pkgs.prusa-slicer
       pkgs.xfce.thunar
       pkgs.p7zip
       pkgs.dropbox 
