@@ -11,6 +11,7 @@ in {
     description = "oscilo";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [
+      pkgs.amdvlk
       pkgs.waybar
       pkgs.usbutils
       pkgs.wget
@@ -36,6 +37,9 @@ in {
       pkgs.mpi
       pkgs.elmerfem
       nix-alien-pkgs.nix-alien
+      pkgs.kdePackages.kdenlive
+      pkgs.glaxnimate
+      pkgs.vlc
     ]; 
   };
 }
