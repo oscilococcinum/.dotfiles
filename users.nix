@@ -11,7 +11,6 @@ in {
     description = "oscilo";
     extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" ];
     packages = [
-      pkgs.amdvlk
       pkgs.waybar
       pkgs.usbutils
       pkgs.wget
