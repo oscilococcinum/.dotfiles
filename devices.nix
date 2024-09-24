@@ -14,6 +14,9 @@
     device = "/dev/sda1";
     fsType = "ext4";
   };
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+  services.devmon.enable = true;
 
   ###Networking
   boot.extraModulePackages = [ 
