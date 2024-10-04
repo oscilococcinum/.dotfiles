@@ -64,6 +64,14 @@ function fish_prompt --description 'Write out the prompt'
         echo -n "<nix-shell> "
       end
     )
+
+    set -l nix_ssh_info (
+      if test -n "$SSH_CLIENT"
+	echo "<SSH:$hostname> "
+      end
+    )
+
+    echo -n -s "$nix_ssh_info"
     echo -n -s "$nix_shell_info"
     
 end

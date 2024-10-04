@@ -3,13 +3,15 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
   outputs = { self, nixpkgs }: {
-    nixosConfigurations.oscilo-pc = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.oscilo-srv = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
 	./devices.nix
 	./global-pkgs.nix
 	./other.nix
 	./users.nix
+	./nextcloud.nix
+	./ssh.nix
       ];
     };
   };
