@@ -2,18 +2,20 @@
 
 {
   imports = [
-      /etc/nixos/hardware-configuration.nix
-    ];
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
   ###Hard_Drives
   boot.supportedFilesystems = [ "ntfs" ];
+  
   fileSystems."/media/crucial" = {
     device = "/dev/sda1";
     fsType = "ext4";
   };
+
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.devmon.enable = true;
@@ -22,11 +24,13 @@
   boot.extraModulePackages = [ 
     config.boot.kernelPackages.rtl8812au 
   ];
+
   networking.hostName = "oscilo-pc";
   networking.networkmanager.enable = true;
   networking.networkmanager.unmanaged = [
-     "*" "except:type:wwan" "except:type:gsm"
+    "*" "except:type:wwan" "except:type:gsm"
   ];
+
   networking.wireless.enable = true;
   networking.wireless.networks = {
     Orange_Swiatlowod_S_EXT = {
