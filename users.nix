@@ -28,7 +28,6 @@ in {
       pkgs.prusa-slicer
       pkgs.xfce.thunar
       pkgs.p7zip
-      pkgs.dropbox 
       pkgs.spacenavd
       pkgs.paraview
       ondsel-pkg.ondsel-appimage-pre
@@ -39,6 +38,7 @@ in {
       pkgs.kdePackages.kdenlive
       pkgs.glaxnimate
       pkgs.vlc
+      pkgs.nextcloud-client
     ]; 
   };
 }
