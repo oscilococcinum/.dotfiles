@@ -67,7 +67,7 @@ function fish_prompt --description 'Write out the prompt'
 
     set -l nix_ssh_info (
       if test -n "$SSH_CLIENT"
-	echo "<SSH:$hostname> "
+	echo (set_color brmagenta)"<SSH:$hostname> " (set_color normal)
       end
     )
 
