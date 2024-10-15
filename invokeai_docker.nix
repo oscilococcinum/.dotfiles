@@ -1,4 +1,8 @@
 { lib, imputs, config, pkgs, ... }:{
+    environment.systemPackages = [
+        amdgpu-dkms
+    ];
+    
     virtualisation.oci-containers = {
         backend = "docker";
         containers = {
@@ -8,10 +12,11 @@
                 #volumes = [
                     #"/root/hackagecompare/packageStatistics.json:/root/hackagecompare/packageStatistics.json"
                 #];
-                #cmd = [
-                #    "--base-url"
-                #    "\"/hackagecompare\""
-                #];
+                cmd = [
+                    "--device /dev/kfd"
+                    "--device /dev/dri"
+                    "--security-opt seccomp=unconfined"
+                ];
             };
         };
     };
