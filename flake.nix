@@ -10,8 +10,9 @@
 	      ./global-pkgs.nix
 	      ./other.nix
 	      ./users.nix
-        ./docker.nix
-        ./invokeai_docker.nix
+        ./podman.nix
+	./pytorch-rocm.nix
+        ./invokeai.nix
       ];
     };
   };
