@@ -11,7 +11,6 @@
 	      ./other.nix
 	      ./users.nix
         ./podman.nix
-	./pytorch-rocm.nix
         ./invokeai.nix
       ];
     };

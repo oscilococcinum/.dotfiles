@@ -1,4 +1,4 @@
-{ pkgs, ... }:{
+{ pkgs, networking, ... }:{
     environment.systemPackages = [
         pkgs.rocmPackages.rocm-smi
     ];
@@ -8,10 +8,10 @@
         containers = {
             invokeai-rocm = {
                 image = "ghcr.io/invoke-ai/invokeai:main-rocm";
-                ports = [ "80:9090" ];
+                ports = [ "127.0.0.1:9090:9090" ];
 		autoStart = true;
-                extraOptions = [
-                    "--device" 
+                cmd = [
+                    "--device"
 		    "/dev/kfd"
                     "--device"
 		    "/dev/dri"
@@ -20,5 +20,13 @@
                 ];
             };
         };
+    };
+
+    networking.firewall.allowedTCPPorts = [ 9090 ];
+    networking.nat = {
+      enable = true;
+      internalInterfaces = ["podman0"];
+      externalInterface = "wlp39s0f3u4";
+      enableIPv6 = true;
     };
 }
