@@ -24,7 +24,7 @@ in {
       pkgs.neofetch
       pkgs.kitty
       pkgs.libsForQt5.okular
-      pkgs.discord
+      pkgs.vesktop
       pkgs.firefox
       zen-browser.default
       pkgs.rofi
@@ -39,6 +39,7 @@ in {
       #pkgs.mpi
       #pkgs.elmerfem
       nix-alien-pkgs.nix-alien
+      pkgs.tree
     ]; 
   };
 }
