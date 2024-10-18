@@ -2,7 +2,6 @@
 
 let
   nix-alien-pkgs = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
-  #openfoam-pkg = (builtins.getFlake "github:oscilococcinum/openfoam-nix").packages.x86_64-linux;
   ondsel-pkg = (builtins.getFlake "github:oscilococcinum/ondsel-nix").packages.x86_64-linux;
   zen-browser = (builtins.getFlake "github:oscilococcinum/zen-browser-flake").packages.x86_64-linux;
 
@@ -31,13 +30,9 @@ in {
       pkgs.prusa-slicer
       pkgs.xfce.thunar
       pkgs.p7zip
-      pkgs.dropbox 
       pkgs.spacenavd
       pkgs.paraview
       ondsel-pkg.ondsel-appimage-pre
-      #openfoam-pkg.openfoam
-      #pkgs.mpi
-      #pkgs.elmerfem
       nix-alien-pkgs.nix-alien
       pkgs.tree
     ]; 
