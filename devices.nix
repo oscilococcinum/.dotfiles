@@ -1,9 +1,18 @@
-{ lib, imputs, config, pkgs, ... }:
+{ lib, imputs, config, pkgs, ... }:{
+    imports = [
+        /etc/nixos/hardware-configuration.nix
+    ];
 
-{
-  imports = [
-    /etc/nixos/hardware-configuration.nix
-  ];
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+    
+    ###Hard_Drives
+    boot.supportedFilesystems = [ "ntfs" ];
+    
+    fileSystems."/media/crucial" = {
+        device = "/dev/sda1";
+        fsType = "ext4";
+    };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
