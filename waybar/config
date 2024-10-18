@@ -103,6 +103,7 @@
     },
 
     "network": {
+    	"on-click": "kitty nmtui",
         "interval": 5,
         "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
