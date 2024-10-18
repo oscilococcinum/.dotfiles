@@ -34,6 +34,7 @@ in {
       pkgs.paraview
       ondsel-pkg.ondsel-appimage-pre
       nix-alien-pkgs.nix-alien
+      pkgs.nextcloud-client
       pkgs.tree
     ]; 
   };
