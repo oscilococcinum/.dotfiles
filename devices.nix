@@ -27,16 +27,6 @@
 
   networking.hostName = "oscilo-pc";
   networking.networkmanager.enable = true;
-  networking.networkmanager.unmanaged = [
-    "*" "except:type:wwan" "except:type:gsm"
-  ];
-
-  networking.wireless.enable = true;
-  networking.wireless.networks = {
-    Orange_Swiatlowod_S_EXT = {
-      psk = "Bargaw28";
-    };
-  };
   
   ###Locale
   time.timeZone = "Europe/Warsaw";
