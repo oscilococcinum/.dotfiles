@@ -3,7 +3,7 @@ let
     nix-alien-pkgs = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
     openfoam-pkg = (builtins.getFlake "github:oscilococcinum/openfoam-nix").packages.x86_64-linux;
     ondsel-pkg = (builtins.getFlake "github:oscilococcinum/ondsel-nix").packages.x86_64-linux;
-    zen-browser = (builtins.getFlake "github:oscilococcinum/zen-browser-flake").packages.x86_64-linux;
+    zen-browser = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
 in {
     users.users.oscilo = {
         shell = pkgs.fish;
@@ -23,7 +23,6 @@ in {
             pkgs.kitty
             pkgs.libsForQt5.okular
             pkgs.vesktop
-            pkgs.firefox
             zen-browser.default
             pkgs.rofi
             pkgs.prusa-slicer
