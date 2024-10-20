@@ -16,6 +16,10 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+  services.devmon.enable = true;
+  services.davfs2.enable = true;
 
   ###Hard drives
   services.gvfs.enable = true;
