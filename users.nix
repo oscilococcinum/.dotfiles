@@ -9,7 +9,7 @@ in {
         shell = pkgs.fish;
         isNormalUser = true;
         description = "oscilo";
-        extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" ];
+        extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" "davfs2" ];
         packages = [
             pkgs.waybar
             pkgs.usbutils

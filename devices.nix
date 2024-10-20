@@ -17,6 +17,7 @@
     services.gvfs.enable = true;
     services.udisks2.enable = true;
     services.devmon.enable = true;
+    services.davfs2.enable = true;
 
     ###Networking
     boot.extraModulePackages = [ 
