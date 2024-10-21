@@ -17,6 +17,7 @@ in {
             pkgs.gcc
             pkgs.htop
             pkgs.git
+            pkgs.neovim
             pkgs.lazygit
             pkgs.pavucontrol
             pkgs.neofetch
@@ -40,6 +41,7 @@ in {
             pkgs.vlc
             pkgs.nextcloud-client
             pkgs.tree
+            pkgs.python312
         ]; 
     };
 }
