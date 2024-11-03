@@ -1,4 +1,4 @@
-{ lib, imputs, config, pkgs, ... }:{
+{ pkgs, config, ... }:{
 
     programs.hyprland = {
         enable = true;
