@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=freecadrt
+Exec=freecadrt %u
+Icon=freecad
+Type=Application
+MimeType=cad
+StartupWMClass=freecad
+Categories=CAD;
+StartupNotify=true
+Terminal=false
+X-MultipleArgs=false
+Keywords=CAD;cad;CAE;cae
+Actions=new-window
+
+[Desktop Action new-window]
+Name=Open a New Window
+Exec=freecadrt %u

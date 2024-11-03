@@ -1,4 +1,4 @@
-{ lib, imputs, config, pkgs, ... }:{
+{ config, pkgs, ... }:{
     imports = [
         /etc/nixos/hardware-configuration.nix
     ];

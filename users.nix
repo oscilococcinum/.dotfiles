@@ -1,9 +1,9 @@
-{ lib, imputs, config, pkgs, ... }:
+{ pkgs, ... }:
 let
     nix-alien-pkgs = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
-    openfoam-pkg = (builtins.getFlake "github:oscilococcinum/openfoam-nix").packages.x86_64-linux;
-    ondsel-pkg = (builtins.getFlake "github:oscilococcinum/ondsel-nix").packages.x86_64-linux;
-    zen-browser = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
+    openfoam-pkg = (builtins.getFlake (toString ./pkgs/openfoam)).packages.x86_64-linux;
+    freecad-pkg = (builtins.getFlake (toString ./pkgs/freecad)).packages.x86_64-linux;
+    zen-browser = (builtins.getFlake (toString ./pkgs/zen-browser)).packages.x86_64-linux;
 in {
     users.users.oscilo = {
         shell = pkgs.fish;
@@ -31,7 +31,8 @@ in {
             pkgs.p7zip
             pkgs.spacenavd
             pkgs.paraview
-            ondsel-pkg.ondsel-appimage-pre
+            freecad-pkg.freecadrt-appimage
+            freecad-pkg.freecad-weekly-appimage
             openfoam-pkg.openfoam
             pkgs.mpi
             pkgs.elmerfem
