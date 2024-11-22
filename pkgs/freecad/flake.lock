@@ -3,13 +3,13 @@
     "freecad-weekly-appimage-x86_64-linux": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-ULXuhOYutz9sxsDqNDdKdehVbJf1fUKIxTvke/I+mz0=",
+        "narHash": "sha256-nNEnrYzxSrzQXCLwPCU3ds1phIiKazC+q9tz0KME6Ts=",
         "type": "file",
-        "url": "https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-39100-conda-Linux-x86_64-py311.AppImage"
+        "url": "https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-39240-conda-Linux-x86_64-py311.AppImage"
       },
       "original": {
         "type": "file",
-        "url": "https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-39100-conda-Linux-x86_64-py311.AppImage"
+        "url": "https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-39240-conda-Linux-x86_64-py311.AppImage"
       }
     },
     "freecadrt-appimage-x86_64-linux": {
