@@ -76,6 +76,7 @@
     },
 
     "cpu": {
+        "on-click": "kitty htop",
         "interval": 5,
         "format": "  {usage}%", // ({load})" Icon: microchip
         "states": {
@@ -95,6 +96,7 @@
     },
 
     "memory": {
+        "on-click": "kitty htop",
         "interval": 5,
         "format": "  {}%", // Icon: memory
         "states": {
