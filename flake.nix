@@ -7,10 +7,10 @@
         nixosConfigurations.oscilo-pc = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
-	        ./devices.nix
-	        ./global-pkgs.nix
-	        ./other.nix
-	        ./users.nix
+                ./devices.nix
+                ./global-pkgs.nix
+                ./other.nix
+                ./users.nix
             ];
         };
     };
