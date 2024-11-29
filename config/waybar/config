@@ -19,11 +19,11 @@
     "height": 30,
 
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode"
+        "hyprland/workspaces",
+        "hyprland/mode"
     ],
     "modules-center": [
-        "sway/window"
+        "hyprland/window"
     ],
     "modules-right": [
         "network",
@@ -32,6 +32,7 @@
         "temperature",
         "custom/keyboard-layout",
         "battery",
+        "pulseaudio",
         "tray",
         "clock#date",
         "clock#time"
@@ -64,19 +65,19 @@
 
     "clock#time": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "format": "{:%H:%M}",
         "tooltip": false
     },
 
     "clock#date": {
       "interval": 10,
-      "format": "  {:%e %b %Y}", // Icon: calendar-alt
+      "format": " ", //{:%e %b %Y}", Icon: calendar-alt
       "tooltip-format": "{:%e %B %Y}"
     },
 
     "cpu": {
         "interval": 5,
-        "format": "  {usage}% ({load})", // Icon: microchip
+        "format": "  {usage}%", // ({load})" Icon: microchip
         "states": {
           "warning": 70,
           "critical": 90
@@ -106,9 +107,10 @@
     	"on-click": "kitty nmtui",
         "interval": 5,
         "format-wifi": "  {essid} ({signalStrength}%) {bandwidthDownBits}↓ {bandwidthUpBits}↑", // Icon: wifi
-	"format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}"
+	    "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠",
+        "tooltip-format": "{ifname}: {ipaddr}\n{essid} ({signalStrength}%) {bandwidthDownBits}↓ {bandwidthUpBits}↑",
+        "max-length": 10
     },
 
     "sway/mode": {
@@ -137,22 +139,22 @@
         }
     },
 
-    //"pulseaudio": {
-    //    //"scroll-step": 1,
-    //    "format": "{icon}  {volume}%",
-    //    "format-bluetooth": "{icon}  {volume}%",
-    //    "format-muted": "",
-    //    "format-icons": {
-    //        "headphones": "",
-    //        "handsfree": "",
-    //        "headset": "",
-    //        "phone": "",
-    //        "portable": "",
-    //        "car": "",
-    //        "default": ["", ""]
-    //    },
-    //    "on-click": "pavucontrol"
-    //},
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
 
     "temperature": {
       "critical-threshold": 80,
