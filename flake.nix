@@ -4,7 +4,7 @@
     };
 
     outputs = { self, nixpkgs }:{
-        nixosConfigurations.oscilo-pc = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.oscilo = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
                 ./devices.nix

@@ -1,30 +1,16 @@
 { config, pkgs, ... }:{
-    imports = [
-        /etc/nixos/hardware-configuration.nix
-    ];
-
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-    
-    ###Hard_Drives
-    boot.supportedFilesystems = [ "ntfs" ];
-    
-    fileSystems."/media/crucial" = {
-        device = "/dev/sda1";
-        fsType = "ext4";
-    };
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.devmon.enable = true;
-  services.davfs2.enable = true;
-
+  
   ###Hard drives
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.devmon.enable = true;
+  services.davfs2.enable = true;
 
   ###Networking
   networking.hostName = "oscilo";
