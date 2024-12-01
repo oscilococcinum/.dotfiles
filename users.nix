@@ -1,48 +1,51 @@
 { pkgs, ... }:
 let
-    nix-alien-pkgs = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
+    nix-alien-pkg = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
     openfoam-pkg = (builtins.getFlake (toString ./pkgs/openfoam)).packages.x86_64-linux;
     freecad-pkg = (builtins.getFlake (toString ./pkgs/freecad)).packages.x86_64-linux;
-    zen-browser = (builtins.getFlake (toString ./pkgs/zen-browser)).packages.x86_64-linux;
+    zen-browser-pkg = (builtins.getFlake (toString ./pkgs/zen-browser)).packages.x86_64-linux;
+    quickemu-pkg = (builtins.getFlake "https://github.com/quickemu-project/quickemu.git").packages.x86_64-linux;
 in {
     users.users.oscilo = {
         shell = pkgs.fish;
         isNormalUser = true;
         description = "oscilo";
-        extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" "davfs2" ];
-        packages = [
-            pkgs.waybar
-            pkgs.usbutils
-            pkgs.wget
-            pkgs.gcc
-            pkgs.htop
-            pkgs.git
-            pkgs.neovim
-            pkgs.lazygit
-            pkgs.pavucontrol
-            pkgs.neofetch
-            pkgs.kitty
-            pkgs.libsForQt5.okular
-            pkgs.vesktop
-            zen-browser.default
-            pkgs.rofi
-            pkgs.prusa-slicer
-            pkgs.xfce.thunar
-            pkgs.p7zip
-            pkgs.spacenavd
-            pkgs.paraview
-            freecad-pkg.freecadrt-appimage
-            freecad-pkg.freecad-weekly-appimage
+        extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" "davfs2" "quemu" ];
+        packages = (with pkgs; [
+            waybar
+            usbutils
+            wget
+            gcc
+            htop
+            git
+            neovim
+            lazygit
+            pavucontrol
+            neofetch
+            kitty
+            libsForQt5.okular
+            vesktop
+            rofi
+            prusa-slicer
+            xfce.thunar
+            p7zip
+            spacenavd
+            paraview
+            mpi
+            elmerfem
+            kdePackages.kdenlive
+            glaxnimate
+            vlc
+            nextcloud-client
+            python312
+            quickemu
+            spice-gtk
+        ]) ++ [
             openfoam-pkg.openfoam
-            pkgs.mpi
-            pkgs.elmerfem
-            nix-alien-pkgs.nix-alien
-            pkgs.kdePackages.kdenlive
-            pkgs.glaxnimate
-            pkgs.vlc
-            pkgs.nextcloud-client
-            pkgs.tree
-            pkgs.python312
-        ]; 
+            nix-alien-pkg.nix-alien
+            freecad-pkg.freecad-weekly-appimage
+            freecad-pkg.freecadrt-appimage
+            zen-browser-pkg.specific
+        ];
     };
 }
