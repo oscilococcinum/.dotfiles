@@ -47,7 +47,7 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.autoLogin.user = "oscilo";
   services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.defaultSession = "hyprland";
+  services.displayManager.defaultSession = "sway";
 
   ###Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth

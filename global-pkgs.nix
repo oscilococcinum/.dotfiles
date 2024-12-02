@@ -1,10 +1,4 @@
-{ pkgs, config, ... }:{
-
-    programs.hyprland = {
-        enable = true;
-        xwayland.enable = true;
-    };
-    
+{ pkgs, ... }:{
     programs.fish = {
         enable = true;
     };
@@ -14,6 +8,23 @@
         remotePlay.openFirewall = true;
         dedicatedServer.openFirewall = true;
     };
+
+    programs.sway = {
+        enable = true;
+        wrapperFeatures.gtk = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+        grim # screenshot functionality
+        slurp # screenshot functionality
+        wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+        mako # notification system developed by swaywm maintainer
+        dmenu
+    ];
+
+    # Enable the gnome-keyring secrets vault. 
+    # Will be exposed through DBus to programs willing to store secrets.
+    services.gnome.gnome-keyring.enable = true;
 
     fonts.packages = with pkgs; [
         font-awesome
