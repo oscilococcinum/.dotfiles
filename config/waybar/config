@@ -19,11 +19,11 @@
     "height": 30,
 
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/mode"
+        "sway/workspaces",
+        "sway/mode"
     ],
     "modules-center": [
-        "hyprland/window"
+        "sway/window"
     ],
     "modules-right": [
         "network",
