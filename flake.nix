@@ -11,6 +11,7 @@
                 ./global-pkgs.nix
                 ./other.nix
                 ./users.nix
+                ./battery.nix
             ];
         };
     };
