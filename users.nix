@@ -12,30 +12,17 @@ in {
         description = "oscilo";
         extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" "davfs2" "quemu" ];
         packages = (with pkgs; [
-            waybar
-            usbutils
-            wget
-            gcc
-            htop
             git
-            neovim
             lazygit
-            pavucontrol
-            neofetch
-            kitty
             libsForQt5.okular
             vesktop
-            rofi
             prusa-slicer
-            xfce.thunar
             p7zip
             spacenavd
             paraview
             mpi
             elmerfem
             kdePackages.kdenlive
-            glaxnimate
-            vlc
             nextcloud-client
             python312
             quickemu
