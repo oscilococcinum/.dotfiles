@@ -6,39 +6,39 @@
 #---------------#
 # waybar toggle #
 #---------------#
-bindsym $mod+o exec killall -SIGUSR1 waybar
+    bindsym $mod+o exec killall -SIGUSR1 waybar
 
 #-------------------------------------------#
 # switch between current and last workspace #
 #-------------------------------------------#
 #slash(/)
-bindsym $mod+slash workspace back_and_forth
+    bindsym $mod+slash workspace back_and_forth
 
 #-------------------------------#
 # Switch to prev/next workspace #
 #-------------------------------#
-#comma(,) period(.)
-bindsym $mod+period workspace next
-bindsym $mod+comma workspace prev
+    #comma(,) period(.)
+    bindsym $mod+period workspace next
+    bindsym $mod+comma workspace prev
 
 #-----------------------------#
 #           Misc              #
 #-----------------------------#
-output * adaptive_sync on
-  
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-
-default_border pixel 0
-default_floating_border pixel 0
-gaps inner  5
-gaps outer  5
-bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
-bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
+    output * adaptive_sync on
+      
+    exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+    
+    default_border pixel 0
+    default_floating_border pixel 0
+    gaps inner  5
+    gaps outer  5
+    bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
+    bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
 
 # Activate smart borders (always)
-smart_borders on
-#smart_gaps on
+    smart_borders on
+    #smart_gaps on
 
 #------------------------------#
 # Always float certain windows #
@@ -105,7 +105,7 @@ smart_borders on
 #-----------#
 # Autostart #
 #-----------#
-    #exec_always  --no-startup-id  dunst &
+#    exec_always  --no-startup-id  dunst &
 #    exec_always  --no-startup-id  mako &
 #    exec_always  --no-startup-id  fcitx5 &
 #    exec_always  --no-startup-id  nm-applet --indicator &
@@ -163,7 +163,7 @@ smart_borders on
 #    set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 #-----------#
-# WallPaper #
+# Monitors #
 #-----------#
     ### Output configuration
     #
@@ -178,7 +178,10 @@ smart_borders on
     # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png 
     #output "*" bg ~/.config/sway/Background/wall5.png fill
     # Automatically change wallpapers at intervals
-#    exec_always --no-startup-id ~/.config/sway/dynamic_wallpaper.sh $
+    
+    exec_always --no-startup-id swaybg -i ~/.dotfiles/config/sway/wallpaper/dune01.jpg &
+    output DP-3 resolution 1920x1080 position 0,0
+    output HDMI-A-1 resolution 1920x1080 position 1920,0
 
 #-------------------------------------------------#
 # Control volume,monitor brightness,media players #
@@ -204,7 +207,7 @@ smart_borders on
 
    # exec swayidle -w \
    #        timeout 900 'systemctl suspend' \
-   #         before-sleep '~/.config/sway/swaylock.sh'
+   #        before-sleep '~/.config/sway/swaylock.sh'
 
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -222,7 +225,6 @@ smart_borders on
            natural_scroll enabled
            middle_emulation enabled
        }
-
 
 #----------------#
 # Key bindings --#
@@ -332,7 +334,7 @@ smart_borders on
     bindsym $mod+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-#    bindsym $mod+space focus mode_toggle
+    #bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+p focus parent
@@ -342,14 +344,14 @@ smart_borders on
 # Scratchpad: #
 #-------------#
 ## hide | show window(minus is "-" and plus is "+".)
-bindsym $mod+minus move scratchpad
-bindsym $mod+equal scratchpad show
+    bindsym $mod+minus move scratchpad
+    bindsym $mod+equal scratchpad show
 
 #----------------------#
 # Resizing containers: #
 #----------------------#
-bindsym $mod+r mode "resize"
-mode "resize" {
+    bindsym $mod+r mode "resize"
+    mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
@@ -370,11 +372,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 ## Better to resize window
-bindsym Shift+Ctrl+h             resize shrink width  5 px or 5 ppt
-bindsym Shift+Ctrl+k             resize grow   height 5 px or 5 ppt
-bindsym Shift+Ctrl+j             resize shrink height 5 px or 5 ppt
-bindsym Shift+Ctrl+l             resize grow   width  5 px or 5 ppt
-bindsym Shift+Ctrl+Left          resize shrink width  5 px or 5 ppt
-bindsym Shift+Ctrl+Up            resize grow   height 5 px or 5 ppt
-bindsym Shift+Ctrl+Down          resize shrink height 5 px or 5 ppt
-bindsym Shift+Ctrl+Right         resize grow   width  5 px or 5 ppt
+    bindsym Shift+Ctrl+h             resize shrink width  5 px or 5 ppt
+    bindsym Shift+Ctrl+k             resize grow   height 5 px or 5 ppt
+    bindsym Shift+Ctrl+j             resize shrink height 5 px or 5 ppt
+    bindsym Shift+Ctrl+l             resize grow   width  5 px or 5 ppt
+    bindsym Shift+Ctrl+Left          resize shrink width  5 px or 5 ppt
+    bindsym Shift+Ctrl+Up            resize grow   height 5 px or 5 ppt
+    bindsym Shift+Ctrl+Down          resize shrink height 5 px or 5 ppt
+    bindsym Shift+Ctrl+Right         resize grow   width  5 px or 5 ppt

@@ -20,6 +20,7 @@
         mako # notification system developed by swaywm maintainer
         dmenu
         waybar
+        swaybg
         neovim
         pavucontrol
         kitty
