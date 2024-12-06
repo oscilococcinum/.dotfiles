@@ -179,9 +179,11 @@
     #output "*" bg ~/.config/sway/Background/wall5.png fill
     # Automatically change wallpapers at intervals
     
-    exec_always --no-startup-id swaybg -i ~/.dotfiles/config/sway/wallpaper/dune01.jpg &
+    exec_always --no-startup-id swaybg -i ~/.dotfiles/config/sway/wallpaper/wall01.jpg &
     output DP-3 resolution 1920x1080 position 0,0
+    workspace 1 output DP-3
     output HDMI-A-1 resolution 1920x1080 position 1920,0
+    workspace 2 output HDMI-A-1
 
 #-------------------------------------------------#
 # Control volume,monitor brightness,media players #
@@ -230,7 +232,7 @@
 # Key bindings --#
 #----------------#
     # Starts a dmenu
-    bindsym $mod+d exec dmenu_run
+    bindsym $mod+d exec bemenu-run -b
     # Start a terminal
     bindsym $mod+Return exec $term
     # quick start some applications
@@ -243,7 +245,8 @@
     # Reload the configuration file
     bindsym $mod+Shift+c reload
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+f11 exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+f12 exec swaynag -t warning -m 'Do you really want to shutdown.' -B 'Yes, exit sway' 'shutdown 0'
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
