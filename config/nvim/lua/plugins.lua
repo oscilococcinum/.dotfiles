@@ -18,6 +18,7 @@ require("lazy").setup({
         "onsails/lspkind.nvim",
         event = { "VimEnter" },
     },
+
     -- Auto-completion engine
     {
         "hrsh7th/nvim-cmp",
@@ -32,6 +33,7 @@ require("lazy").setup({
             require("config.nvim-cmp")
         end,
     },
+
     -- Code snippet engine
     {
         "L3MON4D3/LuaSnip",
@@ -42,4 +44,10 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+
+    -- Telescope (fuzzy finder)
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
 })
