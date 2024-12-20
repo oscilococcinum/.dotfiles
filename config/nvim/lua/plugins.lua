@@ -50,4 +50,14 @@ require("lazy").setup({
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+
+    ---- Harpoon
+    --{
+        --"ThePrimeagen/harpoon",
+        --branch = "harpoon2",
+        --dependencies = { "nvim-lua/plenary.nvim" }
+    --},
+
+    -- UndoTree
+    --"mbbill/undotree.nvim",
 })
