@@ -246,7 +246,7 @@
     bindsym $mod+Shift+c reload
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+f11 exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+f12 exec swaynag -t warning -m 'Do you really want to shutdown.' -B 'Yes, exit sway' 'shutdown 0'
+    bindsym $mod+Shift+f12 exec swaynag -t warning -m 'Do you really want to shutdown.' -B 'Yes, shutdown' 'shutdown 0'
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
