@@ -31,7 +31,7 @@ in {
       nix-alien-pkg.nix-alien
       freecad-pkg.freecad-weekly-appimage
       freecad-pkg.freecadrt-appimage
-      zen-browser-pkg.specific
+      zen-browser-pkg.zen-twilight-appimage
     ];
   };
 }
