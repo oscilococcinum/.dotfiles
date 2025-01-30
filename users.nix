@@ -1,10 +1,7 @@
 { pkgs, ... }:
 let
+  custom-nixpkgs = (builtins.getFlake "github:oscilococcinum/custom-nixpkgs").packages.x86_64-linux;
   nix-alien-pkg = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
-  openfoam-pkg = (builtins.getFlake (toString ./pkgs/openfoam)).packages.x86_64-linux;
-  freecad-pkg = (builtins.getFlake (toString ./pkgs/freecad)).packages.x86_64-linux;
-  zen-browser-pkg = (builtins.getFlake (toString ./pkgs/zen-browser)).packages.x86_64-linux;
-  quickemu-pkg = (builtins.getFlake "https://github.com/quickemu-project/quickemu.git").packages.x86_64-linux;
 in {
   users.users.oscilo = {
     shell = pkgs.fish;
@@ -27,11 +24,11 @@ in {
       quickemu
       spice-gtk
     ]) ++ [
-      openfoam-pkg.openfoam
+      custom-nixpkgs.zen-twilight-appimage
+      custom-nixpkgs.freecad-weekly-appimage
+      custom-nixpkgs.freecadrt-appimage
       nix-alien-pkg.nix-alien
-      freecad-pkg.freecad-weekly-appimage
-      freecad-pkg.freecadrt-appimage
-      zen-browser-pkg.zen-twilight-appimage
+      custom-nixpkgs.openfoam
     ];
   };
 }
