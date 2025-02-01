@@ -29,6 +29,8 @@ in {
       custom-nixpkgs.freecadrt-appimage
       nix-alien-pkg.nix-alien
       custom-nixpkgs.openfoam
+      custom-nixpkgs.OpenHantek6022
     ];
   };
+  services.udev.packages = [ custom-nixpkgs.OpenHantek6022 ];
 }
