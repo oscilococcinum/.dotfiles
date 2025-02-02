@@ -26,6 +26,7 @@ in {
       python312
       quickemu
       spice-gtk
+      bluetuith
     ]) ++ [
       # openfoam-pkg.openfoam
       nix-alien-pkg.nix-alien
