@@ -1,6 +1,8 @@
 { pkgs, ... }:
 let
-  custom-nixpkgs = (builtins.getFlake "github:oscilococcinum/custom-nixpkgs").packages.x86_64-linux;
+  openhantek-nix = (builtins.getFlake "github:oscilococcinum/openhantek6022-nix").packages.x86_64-linux;
+  zen-browser-nix = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
+  freecad-nix = (builtins.getFlake "github:oscilococcinum/freecad-nix").packages.x86_64-linux;
   nix-alien-pkg = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
 in {
   users.users.oscilo = {
@@ -25,12 +27,12 @@ in {
       spice-gtk
       bluetuith
     ]) ++ [
-      custom-nixpkgs.zen-twilight-appimage
-      custom-nixpkgs.freecad-weekly-appimage
-      custom-nixpkgs.freecadrt-appimage
+      zen-browser-nix.zen-twilight-appimage
+      freecad-nix.freecad-appimage
+      freecad-nix.freecadrt-appimage
       nix-alien-pkg.nix-alien
-      custom-nixpkgs.OpenHantek6022
+      openhantek-nix.openhantek6022
     ];
   };
-  services.udev.packages = [ custom-nixpkgs.OpenHantek6022 ];
+  services.udev.packages = [ openhantek-nix.openhantek6022 ];
 }
