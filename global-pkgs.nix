@@ -32,6 +32,7 @@
     neofetch
     glaxnimate
     nextcloud-client
+    ripgrep
   ];
 
   # Enable the gnome-keyring secrets vault. 
