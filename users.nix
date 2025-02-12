@@ -29,7 +29,6 @@ in {
     ]) ++ [
       zen-browser-nix.zen-twilight-appimage
       freecad-nix.freecad-appimage
-      freecad-nix.freecadrt-appimage
       nix-alien-pkg.nix-alien
       openhantek-nix.openhantek6022
       openfoam-nix.openfoam
