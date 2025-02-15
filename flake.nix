@@ -4,6 +4,18 @@
   };
 
   outputs = { self, nixpkgs }:{
+
+    nixosConfigurations.oscilo-pc = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./devices.nix
+        ./global-pkgs.nix
+        ./other.nix
+        ./users.nix
+        ./machine-specific.nix
+      ];
+    };
+
     nixosConfigurations.oscilo = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -11,6 +23,7 @@
         ./global-pkgs.nix
         ./other.nix
         ./users.nix
+        ./machine-specific.nix
         ./battery.nix
       ];
     };

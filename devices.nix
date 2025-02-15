@@ -13,7 +13,6 @@
   services.davfs2.enable = true;
 
   ###Networking
-  networking.hostName = "oscilo";
   networking.networkmanager.enable = true;
   
   ###Locale
@@ -48,8 +47,4 @@
   services.displayManager.autoLogin.user = "oscilo";
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.defaultSession = "sway";
-
-  ###Bluetooth
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 }
