@@ -7,24 +7,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   ###Hard drives
-  boot.supportedFilesystems = [ "ntfs" ];
-
-  fileSystems."/media/crucial" = {
-    device = "/dev/sda1";
-    fsType = "ext4";
-  };
-
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.devmon.enable = true;
   services.davfs2.enable = true;
 
   ###Networking
-  boot.extraModulePackages = [ 
-    config.boot.kernelPackages.rtl8812au 
-  ];
-
-  networking.hostName = "oscilo-pc";
   networking.networkmanager.enable = true;
   
   ###Locale
