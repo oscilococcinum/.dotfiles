@@ -13,6 +13,7 @@
         ./other.nix
         ./users.nix
         ./machine-specific.nix
+        ./ollama.nix
       ];
     };
 
