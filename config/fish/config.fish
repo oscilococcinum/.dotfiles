@@ -3,13 +3,10 @@ if status is-interactive
 end
 
 set fish_greeting
-alias nswitch="sudo nixos-rebuild switch --flake ~/.dotfiles/ --impure"
-alias nsh="nix-shell --run fish"
-alias cdh="cd ~/"
 alias v="nvim ."
-alias ll="ls -l"
-alias l="ls -la"
-alias .="ls -l"
+alias ll="ls -lh"
+alias l="ls -lah"
+alias .="ls -lh"
 alias q="exit"
 alias v="nvim ."
 alias vi="nvim"
