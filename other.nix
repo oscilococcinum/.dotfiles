@@ -1,5 +1,4 @@
 { config, ... }:{
-  virtualisation.spiceUSBRedirection.enable = true;
   environment.variables.EDITOR = "nvim";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;

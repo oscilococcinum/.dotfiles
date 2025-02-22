@@ -8,7 +8,7 @@ in {
     shell = pkgs.fish;
     isNormalUser = true;
     description = "oscilo";
-    extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" "davfs2" "quemu" ];
+    extraGroups = [ "storage" "networkmanager" "wheel" "video" "dialout" "davfs2" ];
     packages = (with pkgs; [
       git
       lazygit
@@ -22,8 +22,6 @@ in {
       elmerfem
       kdePackages.kdenlive
       python312
-      quickemu
-      spice-gtk
     ]) ++ [
       zen-browser-nix.zen-twilight-appimage
       freecad-nix.freecad-appimage
