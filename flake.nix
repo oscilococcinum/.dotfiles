@@ -25,6 +25,7 @@
         ./users.nix
         ./machine-specific.nix
         ./battery.nix
+        ./virtualbox.nix
       ];
     };
   };
