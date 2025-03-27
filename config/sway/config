@@ -115,8 +115,9 @@
 # Make capslock work as escape #
 #-------------------------------#
     input "type:keyboard" {           
-        xkb_layout us
+        xkb_layout pl
         xkb_options caps:escape
+        xkb_numlock enabled
     }
 
 
