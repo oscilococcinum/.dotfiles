@@ -33,6 +33,7 @@
     glaxnimate
     nextcloud-client
     ripgrep
+    fzf
   ];
 
   # Enable the gnome-keyring secrets vault. 
