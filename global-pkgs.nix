@@ -22,6 +22,7 @@ in {
   environment.systemPackages = with pkgs; [
     git
     lazygit
+    ranger
     libsForQt5.okular
     vesktop
     prusa-slicer
@@ -40,7 +41,6 @@ in {
     neovim
     pavucontrol
     kitty
-    xfce.thunar
     usbutils
     wget
     vlc
