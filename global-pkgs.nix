@@ -1,4 +1,9 @@
-{ pkgs, ... }:{
+{ pkgs, ... }:
+let
+  zen-browser-nix = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
+  freecad-nix = (builtins.getFlake "github:oscilococcinum/freecad-nix").packages.x86_64-linux;
+  nix-alien-pkg = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
+in {
   programs.fish = {
     enable = true;
   };
@@ -15,6 +20,17 @@
   };
 
   environment.systemPackages = with pkgs; [
+    git
+    lazygit
+    libsForQt5.okular
+    vesktop
+    prusa-slicer
+    p7zip
+    spacenavd
+    paraview
+    mpi
+    elmerfem
+    kdePackages.kdenlive
     grim # screenshot functionality
     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
     mako # notification system developed by swaywm maintainer
@@ -34,6 +50,10 @@
     nextcloud-client
     ripgrep
     fzf
+  ] ++ [
+    zen-browser-nix.zen-twilight-appimage
+    freecad-nix.freecad-appimage
+    nix-alien-pkg.nix-alien
   ];
 
   # Enable the gnome-keyring secrets vault. 
