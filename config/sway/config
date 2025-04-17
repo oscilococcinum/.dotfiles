@@ -110,6 +110,7 @@
 #    exec_always  --no-startup-id  fcitx5 &
 #    exec_always  --no-startup-id  nm-applet --indicator &
      exec_always  --no-startup-id  waybar &
+     exec_always  --no-startup-id  wl-paste -t text --watch clipman store
 
 #-------------------------------#
 # Make capslock work as escape #
@@ -242,6 +243,7 @@
     bindsym $mod+b exec --no-startup-id              zen
     bindsym $mod+Shift+x exec --no-startup-id        swaylock -i ~/.dotfiles/config/sway/wallpaper/wall01.jpg
     bindsym $mod+bracketleft  exec --no-startup-id   flameshot gui
+    bindsym Super+v exec --no-startup-id   clipman pick -t bemenu
     # Kill focused window
     bindsym $mod+q kill
     # Reload the configuration file
