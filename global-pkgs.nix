@@ -57,7 +57,7 @@ in {
   ] ++ [
     zen-browser-nix.zen-twilight-appimage
     freecad-nix.freecad-appimage
-    nix-alien-pkg.nix-alien
+#    nix-alien-pkg.nix-alien
   ];
 
   # Enable the gnome-keyring secrets vault. 
