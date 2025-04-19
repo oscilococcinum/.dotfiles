@@ -242,7 +242,7 @@
     # quick start some applications
     bindsym $mod+b exec --no-startup-id              zen
     bindsym $mod+Shift+x exec --no-startup-id        swaylock -i ~/.dotfiles/config/sway/wallpaper/wall01.jpg
-    bindsym $mod+bracketleft  exec --no-startup-id   flameshot gui
+    bindsym $mod+bracketleft exec "export QT_QPA_PLATFORM=xcb && flameshot gui"
     bindsym Super+v exec --no-startup-id   clipman pick -t bemenu
     # Kill focused window
     bindsym $mod+q kill

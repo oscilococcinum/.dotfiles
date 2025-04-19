@@ -53,6 +53,7 @@ in {
     nextcloud-client
     ripgrep
     fzf
+    killall
   ] ++ [
     zen-browser-nix.zen-twilight-appimage
     freecad-nix.freecad-appimage
