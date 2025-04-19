@@ -247,7 +247,7 @@
     # Kill focused window
     bindsym $mod+q kill
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+c exec "killall .waybar-wrapped && swaymsg reload"
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+f11 exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
     bindsym $mod+Shift+f12 exec swaynag -t warning -m 'Do you really want to shutdown.' -B 'Yes, shutdown' 'shutdown 0'
