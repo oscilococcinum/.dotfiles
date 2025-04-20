@@ -68,6 +68,7 @@
     for_window [app_id="Thunar"]                     floating enable 
     for_window [app_id="Thunar"]                     resize set height 540
     for_window [app_id="Thunar"]                     resize set width 960
+    for_window [app_id="ranger"]                     floating enable
 
 #-------------------------------------------------------#
 # Sticky floating windows(sticky enable|disable|toggle) #
@@ -241,6 +242,7 @@
     bindsym $mod+Return exec $term
     # quick start some applications
     bindsym $mod+b exec --no-startup-id              zen
+    bindsym $mod+e exec "kitty --class ranger -e ranger"
     bindsym $mod+Shift+x exec --no-startup-id        swaylock -i ~/.dotfiles/config/sway/wallpaper/wall01.jpg
     bindsym $mod+bracketleft exec "export QT_QPA_PLATFORM=xcb && flameshot gui"
     bindsym Super+v exec --no-startup-id   clipman pick -t bemenu
@@ -330,9 +332,9 @@
     bindsym $mod+apostrophe splith
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+shift+s layout stacking
+    bindsym $mod+shift+w layout tabbed
+    bindsym $mod+shift+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
