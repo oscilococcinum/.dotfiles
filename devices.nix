@@ -1,16 +1,13 @@
 { config, pkgs, ... }:{
-  imports = [
-    /etc/nixos/hardware-configuration.nix
-  ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+#  boot.loader.systemd-boot.enable = true;
+#  boot.loader.efi.canTouchEfiVariables = true;
   
   ###Hard drives
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.devmon.enable = true;
-  services.davfs2.enable = true;
+#  services.gvfs.enable = true;
+#  services.udisks2.enable = true;
+#  services.devmon.enable = true;
+#  services.davfs2.enable = true;
 
   ###Networking
   networking.networkmanager.enable = true;

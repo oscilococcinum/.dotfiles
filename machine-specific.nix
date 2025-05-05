@@ -2,7 +2,7 @@
 let
   openhantek-nix = (builtins.getFlake "github:oscilococcinum/openhantek6022-nix").packages.x86_64-linux;
 in {
-  networking.hostName = "oscilo";
+  networking.hostName = "wsl";
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot

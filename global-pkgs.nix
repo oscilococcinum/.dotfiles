@@ -1,8 +1,8 @@
 { pkgs, ... }:
 let
-  zen-browser-nix = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
-  freecad-nix = (builtins.getFlake "github:oscilococcinum/freecad-nix").packages.x86_64-linux;
-  nix-alien-pkg = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
+#  zen-browser-nix = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
+#  freecad-nix = (builtins.getFlake "github:oscilococcinum/freecad-nix").packages.x86_64-linux;
+#  nix-alien-pkg = import (builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master") { };
 in {
   programs.fish = {
     enable = true;
@@ -55,8 +55,8 @@ in {
     fzf
     killall
   ] ++ [
-    zen-browser-nix.zen-twilight-appimage
-    freecad-nix.freecad-appimage
+#    zen-browser-nix.zen-twilight-appimage
+#    freecad-nix.freecad-appimage
 #    nix-alien-pkg.nix-alien
   ];
 

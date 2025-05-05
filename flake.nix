@@ -1,9 +1,10 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = { self, nixpkgs }:{
+  outputs = { self, nixpkgs, nixos-wsl }:{
     nixosConfigurations = {
       oscilo-pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -26,6 +27,23 @@
           ./machine-specific.nix
           ./battery.nix
           ./virtualbox.nix
+        ];
+      };
+      wsl = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./devices.nix
+          ./global-pkgs.nix
+          ./other.nix
+          ./users.nix
+          ./machine-specific.nix
+          ./battery.nix
+#          ./virtualbox.nix
+          nixos-wsl.nixosModules.default
+          {
+            wsl.enable = true;
+            wsl.defaultUser = "oscilo";
+          }    
         ];
       };
     };
