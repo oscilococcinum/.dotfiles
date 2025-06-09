@@ -1,8 +1,4 @@
-{ lib, imputs, config, pkgs, ... }:
-
-let
-  #none
-in {
+{ lib, imputs, config, pkgs, ... }:{
   users.users.oscilo = {
     shell = pkgs.fish;
     isNormalUser = true;
