@@ -1,14 +1,13 @@
-{ self, config, lib, pkgs, ... }:
-
-{
+{ self, config, lib, pkgs, ... }:{
   services.nextcloud = {
     enable = true;
     package = pkgs.nextcloud30;
     hostName = "nikradap.ddns.net";
     https = true;
-    #home = "/";
+#    home = "/";
     config.adminpassFile = "${pkgs.writeText "adminpass" "test123"}"; #Only for first run. Change pass after run using "nextcloud-occ user:resetpassword root"
     settings.trusted_domains = [ "192.168.1.28" "nikradap.ddns.net" ];
+#    config.dbtype = "mysql";
   };
   users.users.nextcloud = {
     extraGroups = [ "storage" "wheel" "nextcloud" ];
@@ -27,5 +26,4 @@
       ${config.services.nextcloud.hostName}.email = "gawlikbar@gmail.com"; 
     }; 
   };
-
 }
