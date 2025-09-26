@@ -2,7 +2,10 @@
 let
   zen-browser-nix = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
   freecad-nix = (builtins.getFlake "github:oscilococcinum/freecad-nix").packages.x86_64-linux;
-in {
+in
+{
+  programs.nixvim.enable = true;
+
   programs.fish = {
     enable = true;
   };
@@ -20,49 +23,52 @@ in {
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
-  environment.systemPackages = with pkgs; [
-    git
-    lazygit
-    ranger
-    libsForQt5.okular
-    vesktop
-    prusa-slicer
-    p7zip
-    spacenavd
-    paraview
-    mpi
-    elmerfem
-    kdePackages.kdenlive
-    grim # screenshot functionality
-    (flameshot.override { enableWlrSupport = true; })
-    wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-    cliphist
-    clipman
-    mako # notification system developed by swaywm maintainer
-    bemenu
-    waybar
-    swaybg
-    neovim
-    pavucontrol
-    kitty
-    usbutils
-    wget
-    vlc
-    htop
-    neofetch
-    glaxnimate
-    nextcloud-client
-    ripgrep
-    fzf
-    killall
-    mmex
-  ] ++ [
-    zen-browser-nix.zen-twilight-appimage
-    freecad-nix.freecad-appimage
-#    nix-alien-pkg.nix-alien
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+      git
+      lazygit
+      ranger
+      libsForQt5.okular
+      vesktop
+      prusa-slicer
+      p7zip
+      spacenavd
+      paraview
+      mpi
+      elmerfem
+      kdePackages.kdenlive
+      grim # screenshot functionality
+      (flameshot.override { enableWlrSupport = true; })
+      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+      cliphist
+      clipman
+      mako # notification system developed by swaywm maintainer
+      bemenu
+      waybar
+      swaybg
+      #neovim
+      pavucontrol
+      kitty
+      usbutils
+      wget
+      vlc
+      htop
+      neofetch
+      glaxnimate
+      nextcloud-client
+      ripgrep
+      fzf
+      killall
+      mmex
+    ]
+    ++ [
+      zen-browser-nix.zen-twilight-appimage
+      freecad-nix.freecad-appimage
+      #    nix-alien-pkg.nix-alien
+    ];
 
-  # Enable the gnome-keyring secrets vault. 
+  # Enable the gnome-keyring secrets vault.
   # Will be exposed through DBus to programs willing to store secrets.
   # Enables autologin for nextcloud-client
   services.gnome.gnome-keyring.enable = true;
