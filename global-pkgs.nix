@@ -29,7 +29,6 @@ in
       git
       lazygit
       ranger
-      libsForQt5.okular
       vesktop
       prusa-slicer
       p7zip
@@ -47,7 +46,6 @@ in
       bemenu
       waybar
       swaybg
-      #neovim
       pavucontrol
       kitty
       usbutils
@@ -63,9 +61,8 @@ in
       mmex
     ]
     ++ [
-      zen-browser-nix.zen-twilight-appimage
+      zen-browser-nix.zen-beta-appimage
       freecad-nix.freecad-appimage
-      #    nix-alien-pkg.nix-alien
     ];
 
   # Enable the gnome-keyring secrets vault.
