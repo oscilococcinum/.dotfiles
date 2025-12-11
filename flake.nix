@@ -12,6 +12,7 @@
 	./users.nix
 	./nextcloud.nix
 	./ssh.nix
+	./wordpress.nix
       ];
     };
   };
