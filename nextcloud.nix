@@ -1,12 +1,12 @@
 { self, config, lib, pkgs, ... }:{
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud31;
+    package = pkgs.nextcloud32;
     hostName = "nikradap.ddns.net";
     https = true;
 #    home = "/";
     config.adminpassFile = "${pkgs.writeText "adminpass" "test123"}"; #Only for first run. Change pass after run using "nextcloud-occ user:resetpassword root"
-    settings.trusted_domains = [ "192.168.1.28" "nikradap.ddns.net" ];
+    settings.trusted_domains = [ "192.168.0.192" "nikradap.ddns.net" ];
     config.dbtype = "sqlite";
   };
   users.users.nextcloud = {
