@@ -24,3 +24,9 @@ config/Nextcloud/*\.backup*
 config/Nextcloud/*\.db
 config/Nextcloud/*\.log
 config/Nextcloud/logs
+flake.lock
+config/GIMP/3.0
+config/Nextcloud
+config/flameshot
+config/mozilla/thunderbird/Crash Reports
+config/onlyoffice
