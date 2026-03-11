@@ -237,15 +237,15 @@
 # Key bindings --#
 #----------------#
     # Starts a dmenu
-    bindsym $mod+d exec bemenu-run -b
+    bindsym $mod+d exec bemenu-run -b -R 8 -W 0.5
     # Start a terminal
     bindsym $mod+Return exec $term
     # quick start some applications
-    bindsym $mod+b exec --no-startup-id              zen
+    bindsym $mod+b exec --no-startup-id zen
     bindsym $mod+e exec "kitty --class ranger -e ranger"
     bindsym $mod+Shift+x exec --no-startup-id        swaylock -i ~/.dotfiles/config/sway/wallpaper/wall01.jpg
     bindsym $mod+bracketleft exec "export QT_QPA_PLATFORM=xcb && flameshot gui"
-    bindsym Super+v exec --no-startup-id   clipman pick -t bemenu
+    bindsym Super+v exec --no-startup-id clipman pick -t bemenu
     # Kill focused window
     bindsym $mod+q kill
     # Reload the configuration file
