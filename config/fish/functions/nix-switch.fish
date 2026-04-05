@@ -1,5 +1,5 @@
-function nswitch
-    echo "This command is deprecated use nix-switch"
+function nix-switch
+    nix flake update
     sudo nixos-rebuild switch --flake ~/.dotfiles/ --impure $argv
 end
 
