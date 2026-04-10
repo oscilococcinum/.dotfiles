@@ -32,3 +32,5 @@ config/mozilla/thunderbird/Crash Reports
 config/onlyoffice
 config/Arduino IDE
 config/arduino-ide
+config/Jackify
+config/jackify
