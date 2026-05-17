@@ -34,3 +34,6 @@ config/Arduino IDE
 config/arduino-ide
 config/Jackify
 config/jackify
+config/FreeCAD
+config/PrusaSlicer
+config/chromium
