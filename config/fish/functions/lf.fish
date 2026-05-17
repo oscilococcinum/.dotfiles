@@ -1,3 +1,3 @@
 function lf
-    ranger $args
+    yazi $args
 end

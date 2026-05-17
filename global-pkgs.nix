@@ -28,7 +28,7 @@ in
     [
       git
       lazygit
-      ranger
+      yazi
       vesktop
       prusa-slicer
       p7zip
