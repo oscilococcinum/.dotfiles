@@ -52,7 +52,6 @@ in
       wget
       vlc
       htop
-      neofetch
       glaxnimate
       nextcloud-client
       ripgrep
