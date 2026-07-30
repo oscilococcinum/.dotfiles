@@ -1,0 +1,2 @@
+nixos-rebuild switch --flake --impure <flake.nix folder> --> switch for first run
+nixos-generate-config --> generates /etc/nixos/hardware-configuration.nix
