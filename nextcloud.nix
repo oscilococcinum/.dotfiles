@@ -1,12 +1,12 @@
 { self, config, lib, pkgs, ... }:{
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud32;
+    package = pkgs.nextcloud33;
     hostName = "treescape.ddns.net";
     https = true;
 #    home = "/";
     config.adminpassFile = "${pkgs.writeText "adminpass" "test123"}"; #Only for first run. Change pass after run using "nextcloud-occ user:resetpassword root"
-    settings.trusted_domains = [ "192.168.1.13" "treescape.ddns.net" ];
+    settings.trusted_domains = [ "192.168.1.13" "83.24.248.204" "treescape.ddns.net" ];
     config.dbtype = "sqlite";
   };
   users.users.nextcloud = {
