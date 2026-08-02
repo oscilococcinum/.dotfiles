@@ -12,7 +12,7 @@
       '';
       packages.myVimPackage = with pkgs.vimPlugins; {
         # loaded on launch
-        start = [ fugitive ];
+        start = [ vim-fugitive ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [ ];
       };
