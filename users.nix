@@ -11,7 +11,6 @@
       pkgs.htop
       pkgs.git
       pkgs.lazygit
-      pkgs.neofetch
       pkgs.p7zip
     ]; 
   };
