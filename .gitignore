@@ -1,3 +1,4 @@
+flake.lock
 config/nvim/lazy-lock.json
 config/pulse
 config/pavucontrol.ini
@@ -36,3 +37,5 @@ config/jackify
 config/FreeCAD
 config/PrusaSlicer
 config/chromium
+/flake.lock
+/config/FreeCAD
