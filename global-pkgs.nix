@@ -61,7 +61,7 @@ in
     ]
     ++ [
       zen-browser-nix.zen-beta-appimage
-      freecad-nix.freecad-weekly-appimage
+      freecad-nix.freecad-appimage
     ];
 
   # Enable the gnome-keyring secrets vault.
