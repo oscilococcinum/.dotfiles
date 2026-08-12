@@ -1,8 +1,4 @@
-{ pkgs, ... }:
-let
-  zen-browser-nix = (builtins.getFlake "github:oscilococcinum/zen-browser-nix").packages.x86_64-linux;
-  freecad-nix = (builtins.getFlake "github:oscilococcinum/freecad-nix").packages.x86_64-linux;
-in
+{ pkgs, inputs, ... }:
 {
   programs.nixvim.enable = true;
 
@@ -14,6 +10,7 @@ in
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 
   programs.sway = {
@@ -58,10 +55,12 @@ in
       fzf
       killall
       mmex
+      inputs.zen-browser-nix.packages.${system}.zen-beta-appimage
+      inputs.freecad-nix.packages.${system}.freecad-appimage
     ]
     ++ [
-      zen-browser-nix.zen-beta-appimage
-      freecad-nix.freecad-appimage
+      #inputs.zen-browser-nix.packages.${system}.zen-beta-appimage
+      #inputs.freecad-nix.packages.${system}.freecad-appimage
     ];
 
   # Enable the gnome-keyring secrets vault.
