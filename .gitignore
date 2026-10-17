@@ -35,7 +35,7 @@ config/arduino-ide
 config/Jackify
 config/jackify
 config/FreeCAD
-config/PrusaSlicer
 config/chromium
 /flake.lock
 /config/FreeCAD
+/config/inkscape
